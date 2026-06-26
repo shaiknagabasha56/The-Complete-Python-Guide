@@ -3,7 +3,6 @@
 #Youtube: https://youtube.com/@mirapakaaytech?si=pC5ZmkIl6xgIyGuM
 #GitHub: https://github.com/shaiknagabasha56
 
-
 #--------------------------BASIC LEVEL----------------------------
 
 #1.Simple variable assignment:
