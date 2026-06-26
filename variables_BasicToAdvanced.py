@@ -7,7 +7,7 @@
 #--------------------------BASIC LEVEL----------------------------
 
 #1.Simple variable assignment:
-"""
+""" 
 myName="Nagabasha"
 print(myName)
 
