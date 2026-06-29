@@ -125,9 +125,10 @@ sumOfTwoNums(number1,number2)       #calling a functon with two arguments
 #11.demontrating pass keyword in a function:
 """
 def featureUnderConstruction(): #function is created but
-    pass                        #here i have given pass, which means function is constructed and implemented later
+    pass                      #here i have given pass, which means function is constructed and implemented later
 
-featureUnderConstruction()
+featureUnderConstruction()    #calling the above function.
+
 """
 
 #12.try,except and finally block demonstration:
