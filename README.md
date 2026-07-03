@@ -17,9 +17,8 @@
 <p align="center">
   <a href="#-introduction">Introduction</a> •
   <a href="#-course-index">Course Index</a> •
-  <a href="#-learning-roadmap">Roadmap</a> •
   <a href="#-resources">Resources</a> •
-  <a href="#-author">Author</a>
+  <a href="https://github.com/shaiknagabasha56">Author</a>
 </p>
 
 ---
@@ -46,8 +45,6 @@ If this repository helps even one student save hours of searching for good learn
 
 ---
 
-> ### 💡 Learn deeply. Build confidently. Grow continuously.
-
 
 ## ❤️ Who Is This Guide For?
 
@@ -67,4 +64,5 @@ If this repository helps you learn something new, consider giving it a ⭐.
 Your support helps this project reach more learners and motivates me to keep improving it with better explanations, new chapters, and real-world projects.
 
 Happy Learning! 🚀
+> ### 💡 Learn deeply. Build confidently. Grow continuously.
 
