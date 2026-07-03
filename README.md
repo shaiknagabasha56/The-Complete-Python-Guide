@@ -17,7 +17,6 @@
 <p align="center">
   <a href="#-introduction">Introduction</a> •
   <a href="#-course-index">Course Index</a> •
-  <a href="#-resources">Resources</a> •
   <a href="https://github.com/shaiknagabasha56">Author</a>
 </p>
 
@@ -60,9 +59,44 @@ If this repository helps even one student save hours of searching for good learn
 ## ⭐ Support the Project
 
 If this repository helps you learn something new, consider giving it a ⭐.
-
 Your support helps this project reach more learners and motivates me to keep improving it with better explanations, new chapters, and real-world projects.
 
 Happy Learning! 🚀
 > ### 💡 Learn deeply. Build confidently. Grow continuously.
+
+
+
+# 📚 Course Index
+
+| Module | Module Name | Estimated Reading Time |
+|:------:|-------------|:----------------------:|
+| 00 | Introduction to the Course | 5 min |
+| 01 | History of Python | 20 min |
+| 02 | Python Installation & Setup | 15 min |
+| 03 | Python Syntax & Hello World | 15 min |
+| 04 | Keywords | 10 min |
+| 05 | Input & Output | 20 min |
+| 06 | Variables | 30 min |
+| 07 | Data Types | 60 min |
+| 08 | Type Conversion & Type Casting | 25 min |
+| 09 | Operators | 50 min |
+| 10 | Conditional Statements | 45 min |
+| 11 | Loops | 60 min |
+| 12 | Strings | 90 min |
+| 13 | Lists | 75 min |
+| 14 | Tuples | 35 min |
+| 15 | Sets | 35 min |
+| 16 | Dictionaries | 60 min |
+| 17 | Functions | 90 min |
+| 18 | Function Arguments | 45 min |
+| 19 | Variable Scope (Local, Global & Nonlocal) | 35 min |
+| 20 | Recursion | 30 min |
+| 21 | Lambda Functions | 30 min |
+| 22 | Higher-Order Functions (map, filter, reduce) | 45 min |
+| 23 | Modules | 30 min |
+| 24 | Packages | 30 min |
+| 25 | Virtual Environments (venv & pip) | 25 min |
+| 26 | File Handling | 75 min |
+| 27 | Exception Handling | 60 min |
+| 28 | Object-Oriented Programming (OOP) | 180 min |
 
