@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="#-introduction">Introduction</a> •
-  <a href="course-index">Course Index</a> •
+  [Course Index](#index)
   <a href="https://github.com/shaiknagabasha56">Author</a>
 </p>
 
@@ -66,8 +66,7 @@ Happy Learning! 🚀
 
 
 
-## Course Index(#course-index) 
-
+<h2 id="index">Table of contents</h2>
 | Module | Module Name | Estimated Reading Time |
 |:------:|-------------|:----------------------:|
 | 00 | Introduction to the Course | 5 min |
