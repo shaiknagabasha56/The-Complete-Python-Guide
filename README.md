@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="#-introduction">Introduction</a> •
-  <a href="course_index">Course Index</a> •
+  <a href="course-index">Course Index</a> •
   <a href="https://github.com/shaiknagabasha56">Author</a>
 </p>
 
@@ -66,7 +66,7 @@ Happy Learning! 🚀
 
 
 
-<h2 id="course_index">Course Index</h2>
+## Course Index(#course-index) 
 
 | Module | Module Name | Estimated Reading Time |
 |:------:|-------------|:----------------------:|
