@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="#-introduction">Introduction</a> •
-  <a href="index">Course Index</a> •
+  <a href="#index">Course Index</a> •
   <a href="https://github.com/shaiknagabasha56">Author</a>
 </p>
 
