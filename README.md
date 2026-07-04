@@ -102,6 +102,11 @@ Happy Learning! 🚀
 
 
 
+<details>
+<summary><b>📖 Module 00 • History of Python</b></summary>
+
+---
+
 <h1 id="module00">📖 Module 00 • History of Python</h1>
 
 ---
@@ -324,4 +329,4 @@ Python is rarely used for operating systems, embedded firmware, or hardware-leve
 ## 9. Less Mature Database Layer
 
 Compared to languages like Java or C#, Python's enterprise database ecosystem is less mature.
-
+</details>
