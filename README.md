@@ -1746,3 +1746,1193 @@ https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/variable
 
 ---
 </details>
+
+
+
+
+
+<details>
+<summary>
+<b>📖 Module 04 • Data Types</b>
+</summary>
+
+---
+
+# ❓ What is a Data Type?
+
+In the previous module, we learned that **variables** store different kinds of values such as integers, strings, decimal numbers, Boolean values, and many more.
+
+The **data type** of a variable depends on the **value** stored inside it.
+
+For example,
+
+```python
+age = 20
+
+name = "Nagabasha"
+
+percentage = 95.5
+
+isStudent = True
+```
+
+Here,
+
+- `20` is an **Integer**
+- `"Nagabasha"` is a **String**
+- `95.5` is a **Float**
+- `True` is a **Boolean**
+
+So, every value belongs to a specific category, and that category is called its **Data Type**.
+
+Simply,
+
+> **A Data Type tells Python what kind of value a variable stores, such as a number, text, decimal value, Boolean value, or a collection of values.**
+
+Based on the data type, Python decides:
+
+- What operations are allowed
+- How the value should be stored
+- How much memory should be allocated
+- How the value should be processed
+
+---
+
+# 🤝 Relationship Between Variables and Data Types
+
+Many beginners think that **variables have data types**.
+
+Actually,
+
+**Variables do not have data types.**
+
+The **value** stored inside the variable has a data type.
+
+Let's understand this using an example.
+
+```python
+age = 20
+```
+
+Here,
+
+```
+Variable
+
+age
+
+      │
+
+      ▼
+
+Stores
+
+20
+
+      │
+
+      ▼
+
+Datatype
+
+int
+```
+
+Notice carefully.
+
+The variable is simply named **age**.
+
+The value stored inside it is **20**.
+
+Since **20** is a whole number,
+
+its datatype becomes
+
+```
+int
+```
+
+Another example,
+
+```python
+name = "Nagabasha"
+```
+
+```
+Variable
+
+name
+
+      │
+
+      ▼
+
+Stores
+
+"Nagabasha"
+
+      │
+
+      ▼
+
+Datatype
+
+str
+```
+
+Again,
+
+the variable **name** doesn't decide the datatype.
+
+The **value** does.
+
+Whenever you assign a new value,
+
+Python automatically identifies its datatype.
+
+---
+
+# 🧠 How Does Python Know the Data Type?
+
+One common question every beginner asks is,
+
+> **"How does Python know whether a value is an Integer, String, Float or Boolean?"**
+
+The answer is simple.
+
+Python is a **Dynamically Typed Language**.
+
+This means,
+
+you don't need to tell Python the datatype manually.
+
+The **Python Interpreter** automatically identifies the datatype based on the value you assign.
+
+Let's understand what actually happens inside the computer.
+
+---
+
+## Example 1
+
+Suppose you write
+
+```python
+age = 20
+```
+
+When you run the program,
+
+the Python Interpreter starts reading your code line by line.
+
+```
+age = 20
+
+        │
+
+        ▼
+
+Python Interpreter
+
+        │
+
+        ▼
+
+Reads Value
+
+20
+
+        │
+
+        ▼
+
+Whole Number?
+
+        │
+
+      YES
+
+        │
+
+        ▼
+
+Datatype = int
+
+        │
+
+        ▼
+
+Store in Memory
+```
+
+Now the variable is stored inside memory.
+
+```
+Computer RAM
+
++--------------------------------------+
+| Variable | Value | Datatype          |
++--------------------------------------+
+| age      | 20    | int               |
++--------------------------------------+
+```
+
+---
+
+## Example 2
+
+Now suppose you write
+
+```python
+percentage = 92.5
+```
+
+The interpreter again checks the value.
+
+```
+92.5
+
+      │
+
+      ▼
+
+Contains Decimal?
+
+      │
+
+     YES
+
+      │
+
+      ▼
+
+Datatype = float
+```
+
+Memory becomes
+
+```
+Computer RAM
+
++---------------------------------------------+
+| Variable   | Value | Datatype               |
++---------------------------------------------+
+| age        | 20    | int                    |
+| percentage | 92.5  | float                  |
++---------------------------------------------+
+```
+
+---
+
+## Example 3
+
+Suppose you write
+
+```python
+name = "Nagabasha"
+```
+
+The interpreter checks the value.
+
+```
+"Nagabasha"
+
+        │
+
+        ▼
+
+Inside Quotes?
+
+        │
+
+       YES
+
+        │
+
+        ▼
+
+Datatype = str
+```
+
+Memory
+
+```
+Computer RAM
+
++---------------------------------------------------+
+| Variable   | Value        | Datatype              |
++---------------------------------------------------+
+| age        | 20           | int                   |
+| percentage | 92.5         | float                 |
+| name       | Nagabasha    | str                   |
++---------------------------------------------------+
+```
+
+---
+
+## Example 4
+
+Now,
+
+```python
+isStudent = True
+```
+
+Interpreter
+
+```
+True
+
+      │
+
+      ▼
+
+True / False ?
+
+      │
+
+     YES
+
+      │
+
+      ▼
+
+Datatype = bool
+```
+
+Memory
+
+```
+Computer RAM
+
++----------------------------------------------------------+
+| Variable    | Value        | Datatype                    |
++----------------------------------------------------------+
+| age         | 20           | int                         |
+| percentage  | 92.5         | float                       |
+| name        | Nagabasha    | str                         |
+| isStudent   | True         | bool                        |
++----------------------------------------------------------+
+```
+
+---
+
+# 💡 Important Note
+
+Python identifies the datatype **while the program is executing**.
+
+It does **not** identify the datatype before running the program.
+
+This is because Python is an **Interpreted Language**, which executes the program line by line.
+
+As soon as the interpreter reads a value,
+
+it immediately identifies its datatype,
+
+stores it in memory,
+
+and continues executing the next line.
+
+---
+
+# 📌 Remember
+
+```
+Variable
+
+        │
+
+        ▼
+
+Stores
+
+        │
+
+        ▼
+
+Value
+
+        │
+
+        ▼
+
+Datatype
+```
+
+Always remember,
+
+- Variables do **not** have datatypes.
+- Values have datatypes.
+- Python automatically identifies the datatype based on the assigned value.
+- This happens dynamically while the program is executing.
+
+---
+# 🤔 Why Do We Need Data Types?
+
+Imagine a person gives you the following values:
+
+```text
+20
+
+"Nagabasha"
+
+True
+
+[10, 20, 30]
+```
+
+Without knowing their data types, how would Python know:
+
+- Whether `20` should be added or treated as text?
+- Whether `"Nagabasha"` is a person's name or a number?
+- Whether `True` means **1**, **Yes**, or simply a Boolean value?
+- Whether `[10,20,30]` is a single value or multiple values?
+
+Python needs **Data Types** to correctly understand and process every value.
+
+Data types help Python:
+
+- ✅ Know what operations are allowed on a value.
+- ✅ Decide how much memory should be allocated.
+- ✅ Prevent invalid operations.
+- ✅ Organize data efficiently using different collections.
+- ✅ Perform accurate mathematical calculations.
+- ✅ Represent real-world information correctly.
+- ✅ Make decisions using Boolean values (`True` and `False`).
+
+Without data types, programming would become almost impossible.
+
+---
+
+# ⚠️ What Happens If Data Types Didn't Exist?
+
+Suppose Python had no concept of data types.
+
+Many fundamental features of programming would stop working.
+
+---
+
+## 1. Python Couldn't Distinguish Values
+
+Python wouldn't know whether a value is
+
+- a number
+- text
+- a Boolean value
+- or a collection of items.
+
+Example
+
+```python
+20
+
+"20"
+```
+
+Both would appear identical to Python.
+
+---
+
+## 2. Operations Would Become Confusing
+
+Consider
+
+```python
+20 + 30
+```
+
+Should Python
+
+- Add the numbers?
+
+or
+
+```python
+"20" + "30"
+```
+
+Join the text?
+
+Without data types, Python couldn't decide which operation to perform.
+
+---
+
+## 3. No Error Prevention
+
+Suppose we write
+
+```python
+20 + "Hello"
+```
+
+Normally,
+
+Python generates an error because adding a number and a string is not allowed.
+
+Without data types,
+
+Python wouldn't know this operation is invalid.
+
+---
+
+## 4. Incorrect Calculations
+
+Mathematical operations would become unreliable because Python wouldn't know which values are numbers.
+
+---
+
+## 5. No Conditional Statements
+
+Statements like
+
+```python
+if
+
+while
+```
+
+depend on Boolean values (`True` and `False`).
+
+Without the Boolean data type,
+
+decision-making in programs would not be possible.
+
+---
+
+## 📌 In One Line
+
+> **Without Data Types, Python would not be able to correctly store, understand, or process any value.**
+
+---
+
+# 🌳 Classification of Python Data Types
+
+Python Data Types are broadly classified into **two categories**.
+
+```
+Python Data Types
+
+│
+
+├── Built-in Data Types
+
+│
+
+└── User-defined Data Types
+```
+
+---
+
+## 1️⃣ Built-in Data Types
+
+These are the standard data types that are already provided by Python.
+
+You don't need to create them yourself.
+
+Whenever you assign a value,
+
+Python automatically identifies its built-in data type.
+
+Example
+
+```python
+age = 20
+
+name = "Nagabasha"
+
+marks = 95.5
+```
+
+Python automatically understands their data types.
+
+---
+
+## 2️⃣ User-defined Data Types
+
+Sometimes,
+
+the built-in data types are not enough to represent real-world objects.
+
+In such situations,
+
+we can create our own custom data types using **Classes**.
+
+These are called **User-defined Data Types**.
+
+> **💡 Note**
+>
+> We'll learn User-defined Data Types in detail during the **Object-Oriented Programming (OOP)** module.
+
+---
+
+# 📦 Built-in Data Types
+
+Python provides several built-in data types.
+
+```
+Built-in Data Types
+
+│
+
+├── Numeric
+
+├── Text
+
+├── Boolean
+
+├── Sequence
+
+├── Mapping
+
+├── Set
+
+├── Binary
+
+└── None
+```
+
+Let's understand each one.
+
+---
+
+# 1️⃣ Numeric Type
+
+Numeric data types are used to store numbers.
+
+These are **Immutable** data types.
+
+Python provides three numeric data types.
+
+### int
+
+Stores whole numbers without decimal points.
+
+Examples
+
+```python
+10
+
+-50
+
+999
+```
+
+---
+
+### float
+
+Stores numbers containing decimal points or scientific notation.
+
+Examples
+
+```python
+3.14
+
+-0.001
+
+2e3
+```
+
+---
+
+### complex
+
+Stores complex numbers containing a real part and an imaginary part.
+
+Examples
+
+```python
+3 + 5j
+
+7 - 2j
+```
+
+---
+
+# 2️⃣ Text Type
+
+The **Text** data type is represented by the **String (`str`)** object.
+
+Strings are used to store text or a sequence of characters.
+
+Strings are **Immutable**.
+
+You can access individual characters using indexes.
+
+Example
+
+```python
+name = "Nagabasha"
+
+print(name[0])
+```
+
+Output
+
+```text
+N
+```
+
+Strings can be written using:
+
+### Single Quotes
+
+```python
+'Python'
+```
+
+### Double Quotes
+
+```python
+"Python"
+```
+
+### Triple Quotes
+
+```python
+'''Python'''
+
+"""Python"""
+```
+
+---
+
+# 3️⃣ Boolean Type
+
+Boolean represents only two values.
+
+```python
+True
+
+False
+```
+
+These are mainly used in
+
+- Conditions
+- Loops
+- Comparisons
+- Decision Making
+
+Example
+
+```python
+isLoggedIn = True
+
+isAdmin = False
+```
+
+Python internally treats
+
+```
+True = 1
+
+False = 0
+```
+
+---
+
+# 4️⃣ Sequence Type
+
+A Sequence is an **ordered collection** of items.
+
+Every element has an **index**, starting from **0**.
+
+Sequence types allow us to store multiple values inside a single variable.
+
+Python provides three sequence data types.
+
+---
+
+## List
+
+- Ordered
+- Mutable
+- Allows Duplicate Values
+
+Example
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+```
+
+---
+
+## Tuple
+
+- Ordered
+- Immutable
+- Allows Duplicate Values
+
+Example
+
+```python
+student = ("Nagabasha", 21, "CSE")
+```
+
+---
+
+## String
+
+Strings are also sequence data types because every character has an index.
+
+Example
+
+```python
+language = "Python"
+```
+
+---
+
+# 5️⃣ Mapping Type
+
+A Mapping stores data in the form of **Key : Value** pairs.
+
+Python provides only one Mapping type.
+
+### Dictionary (`dict`)
+
+- Stores Key : Value pairs
+- Keys must be unique
+- Values can be duplicated
+
+Example
+
+```python
+student = {
+    "name": "Nagabasha",
+    "age": 21
+}
+```
+
+---
+
+# 6️⃣ Set Type
+
+A Set stores **unique** values.
+
+Duplicate values are automatically removed.
+
+Sets are **unordered**.
+
+Python provides two Set types.
+
+### set
+
+Example
+
+```python
+colors = {"Red", "Green", "Blue"}
+```
+
+---
+
+### frozenset
+
+A frozenset is exactly like a set,
+
+except it cannot be modified after creation.
+
+Example
+
+```python
+colors = frozenset({"Red", "Green", "Blue"})
+```
+
+---
+
+# 7️⃣ Binary Type
+
+Binary data types are used for working with raw binary data.
+
+Python provides three Binary data types.
+
+- `bytes`
+- `bytearray`
+- `memoryview`
+
+We'll learn these in detail when working with files, networking, and cybersecurity applications.
+
+---
+
+# 8️⃣ None Type
+
+`None` represents the **absence of a value**.
+
+It has only one value.
+
+```python
+None
+```
+
+Example
+
+```python
+x = None
+```
+
+This is commonly used when a variable currently has **no value assigned**.
+
+---
+# 📚 Understanding These Important Terms
+
+Before learning Python collections like **List**, **Tuple**, **Set**, and **Dictionary**, you should first understand the following terms.
+
+Many beginners get confused between these concepts.
+
+Once you understand them, learning Python collections becomes much easier.
+
+---
+
+# 1️⃣ Ordered Data Type
+
+An **Ordered** data type stores elements in the **same order** in which they were inserted.
+
+This means:
+
+- Every element has a fixed position.
+- The order never changes automatically.
+- Whenever you print the collection, the elements appear in the same order they were added.
+
+### Example
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+
+print(fruits)
+print(fruits)
+```
+
+### Output
+
+```text
+['Apple', 'Banana', 'Mango']
+
+['Apple', 'Banana', 'Mango']
+```
+
+Notice that the order remains exactly the same.
+
+Examples of Ordered Data Types:
+
+- ✅ List
+- ✅ Tuple
+- ✅ String
+- ✅ Dictionary (Python 3.7+)
+
+---
+
+# 2️⃣ Unordered Data Type
+
+An **Unordered** data type does **not** maintain a fixed order of elements.
+
+This means:
+
+- Elements have no guaranteed position.
+- Python decides how to store them internally.
+- The output order may change.
+
+### Example
+
+```python
+colors = {"Red", "Green", "Blue"}
+
+print(colors)
+
+print(colors)
+
+print(colors)
+```
+
+Possible Outputs
+
+```text
+{'Green', 'Blue', 'Red'}
+
+{'Blue', 'Red', 'Green'}
+
+{'Red', 'Green', 'Blue'}
+```
+
+The order may be different every time.
+
+Examples of Unordered Data Types:
+
+- ✅ Set
+
+---
+
+# 3️⃣ Mutable Data Type
+
+A **Mutable** data type can be modified after it is created.
+
+You can:
+
+- Add new elements
+- Remove existing elements
+- Update existing values
+
+without creating a new object.
+
+### Example
+
+```python
+fruits = ["Apple", "Banana"]
+
+print(fruits)
+
+fruits.append("Mango")
+
+print(fruits)
+```
+
+### Output
+
+```text
+['Apple', 'Banana']
+
+['Apple', 'Banana', 'Mango']
+```
+
+The same list is modified.
+
+Examples of Mutable Data Types:
+
+- ✅ List
+- ✅ Dictionary
+- ✅ Set
+- ✅ Bytearray
+
+---
+
+# 4️⃣ Immutable Data Type
+
+An **Immutable** data type cannot be changed after it is created.
+
+If you try to modify it,
+
+Python creates a **new object** instead of changing the existing one.
+
+### Example
+
+```python
+name = "Alex"
+
+print(id(name))
+
+name = name + " Smith"
+
+print(name)
+
+print(id(name))
+```
+
+Notice that the memory address changes because Python creates a completely new object.
+
+Examples of Immutable Data Types:
+
+- ✅ int
+- ✅ float
+- ✅ bool
+- ✅ str
+- ✅ tuple
+- ✅ frozenset
+- ✅ bytes
+
+---
+
+# 5️⃣ Indexed Data Type
+
+An **Indexed** data type allows us to access elements using their **position**, called an **Index**.
+
+Python indexing always starts from **0**.
+
+For example,
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+```
+
+```
+        0          1          2
+        │          │          │
+        ▼          ▼          ▼
+
+     Apple     Banana      Mango
+```
+
+Now we can access individual elements.
+
+```python
+print(fruits[0])
+
+print(fruits[1])
+
+print(fruits[2])
+```
+
+### Output
+
+```text
+Apple
+
+Banana
+
+Mango
+```
+
+Indexed data types allow us to directly access any element using its position.
+
+Examples of Indexed Data Types:
+
+- ✅ List
+- ✅ Tuple
+- ✅ String
+
+Dictionary is **not** an indexed data type because it is accessed using **Keys**, not numerical indexes.
+
+Example
+
+```python
+student = {
+    "name": "Nagabasha",
+    "age": 21
+}
+
+print(student["name"])
+```
+
+Similarly,
+
+Set is also **not** indexed because its elements do not have fixed positions.
+
+---
+
+# 📊 Collection Comparison Table
+
+| Collection | Ordered | Mutable | Indexed | Allows Duplicates |
+|:----------:|:-------:|:-------:|:-------:|:-----------------:|
+| **List** | ✅ | ✅ | ✅ | ✅ |
+| **Tuple** | ✅ | ❌ | ✅ | ✅ |
+| **String** | ✅ | ❌ | ✅ | ✅ |
+| **Dictionary** | ✅* | ✅ | ❌ (Uses Keys) | ❌ Keys / ✅ Values |
+| **Set** | ❌ | ✅ | ❌ | ❌ |
+| **Frozen Set** | ❌ | ❌ | ❌ | ❌ |
+
+> **Note:**
+>
+> - Dictionary preserves insertion order in Python 3.7 and later, but it is accessed using **Keys**, not indexes.
+> - Sets automatically remove duplicate values.
+
+---
+
+# 💻 Practice More
+
+To understand Python Data Types from **Beginner → Advanced** with plenty of examples and detailed comments, visit:
+
+🔗 **Nagabasha's GitHub Repository**
+
+https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/datatypes_BasicToAdvanced.py
+
+---
+
+</details>
