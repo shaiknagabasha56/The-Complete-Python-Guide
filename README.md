@@ -2544,7 +2544,7 @@ Python provides three sequence data types.
 ---
 
 ## List
-
+  stores collection of items
 - Ordered
 - Mutable
 - Allows Duplicate Values
@@ -2558,7 +2558,7 @@ fruits = ["Apple", "Banana", "Mango"]
 ---
 
 ## Tuple
-
+  stores collection of items
 - Ordered
 - Immutable
 - Allows Duplicate Values
@@ -2572,7 +2572,7 @@ student = ("Nagabasha", 21, "CSE")
 ---
 
 ## String
-
+strings are nothing but sequence of characters
 Strings are also sequence data types because every character has an index.
 
 Example
