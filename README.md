@@ -3926,7 +3926,8 @@ Output
 ---
 
 ## ➗ Floor Division (`//`)
-
+Performs division operation on operands(variables and
+values
 Returns the **largest whole number less than or equal to the actual result**.
 
 Example
@@ -3958,7 +3959,7 @@ Floor Value
 ---
 
 ## 🧮 Modulus (`%`)
-
+Performs division operation on operands(variables and values)
 Returns the **remainder** after division.
 
 Example
