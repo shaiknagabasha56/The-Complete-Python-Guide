@@ -857,11 +857,7 @@ https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/print_Fu
 
 <details>
 <summary>
-
-## 📖 Module 03 • Variables
-
-Learn what variables are, why they are important, how they work, and why almost every program depends on them.
-
+<b>📖 Module 03 • Variables</b>
 </summary>
 
 ---
