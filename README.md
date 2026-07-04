@@ -71,13 +71,13 @@ Happy Learning! 🚀
 | Module | Module Name | Estimated Reading Time |
 |:------:|-------------|:----------------------:|
 | 00 | History of Python | 20 min |
-| 01 | History of Python | 20 min |
-| 02 | Python Installation & Setup | 15 min |
-| 03 | Python Syntax & Hello World | 15 min |
-| 04 | Keywords | 10 min |
-| 05 | Input & Output | 20 min |
-| 06 | Variables | 30 min |
-| 07 | Data Types | 60 min |
+| 01 | Python installation & Setup | 20 min |
+| 02 | Python Syntax & Hello World | 15 min |
+| 03 | Variables | 20 min |
+| 04 | Data Types | 30 min |
+| 05 | Operators | 30 min |
+| 06 | Keywords | 20 min |
+| 07 | Comments | 60 min |
 | 08 | Type Conversion & Type Casting | 25 min |
 | 09 | Operators | 50 min |
 | 10 | Conditional Statements | 45 min |
