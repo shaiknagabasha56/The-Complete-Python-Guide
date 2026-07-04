@@ -2936,3 +2936,1929 @@ https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/datatype
 ---
 
 </details>
+
+
+
+
+<details>
+<summary>
+
+## 📖 Module 05 • Operators
+
+Learn what operators are, why they are important, how Python performs operations, and how expressions are evaluated.
+
+</summary>
+
+---
+
+# ❓ What is an Operator?
+
+In the previous modules, we learned how to create variables and store different types of values inside them.
+
+For example,
+
+```python
+num1 = 10
+num2 = 20
+```
+
+Now suppose we want to add these two numbers.
+
+How can we tell Python to perform the addition?
+
+The answer is **Operators**.
+
+Simply,
+
+> **An Operator is a special symbol or keyword that tells Python to perform a specific operation on one or more values or variables.**
+
+Operators can perform many different tasks, such as:
+
+- Performing mathematical calculations
+- Assigning values to variables
+- Comparing values
+- Combining multiple conditions
+- Checking object identity
+- Searching values inside collections
+- Manipulating binary data
+
+---
+
+# 🎯 What are Operands?
+
+An operator always works on some values.
+
+These values are called **Operands**.
+
+Simply,
+
+> **Operands are the values or variables on which an operator performs an operation.**
+
+Let's understand with an example.
+
+```python
+print(10 + 20)
+```
+
+```
+10       +       20
+
+│                │
+
+│                │
+
+└── Operand      └── Operand
+
+        +
+
+     Operator
+```
+
+Here,
+
+- `10` is an Operand
+- `20` is an Operand
+- `+` is the Operator
+
+The operator performs addition on the two operands.
+
+---
+
+Another example,
+
+```python
+num1 = 50
+num2 = 25
+
+print(num1 - num2)
+```
+
+```
+num1      -      num2
+
+│                 │
+
+│                 │
+
+└── Operand       └── Operand
+
+         -
+
+     Operator
+```
+
+Notice that operands can be:
+
+- Values
+
+```python
+10 + 20
+```
+
+or
+
+- Variables
+
+```python
+num1 + num2
+```
+
+Both are perfectly valid.
+
+---
+
+# 📝 What is an Expression?
+
+When operands and operators are combined together,
+
+they form an **Expression**.
+
+Simply,
+
+> **An Expression is a combination of operands and operators that Python evaluates to produce a single value.**
+
+Example
+
+```python
+10 + 20
+```
+
+This entire statement is an **Expression**.
+
+Python evaluates it and produces
+
+```
+30
+```
+
+Another example,
+
+```python
+5 * 8
+```
+
+Expression
+
+↓
+
+Output
+
+```
+40
+```
+
+Another example,
+
+```python
+100 > 50
+```
+
+Expression
+
+↓
+
+Output
+
+```
+True
+```
+
+Notice that an expression does **not always** produce a number.
+
+It can also produce:
+
+- Boolean values (`True` / `False`)
+- Strings
+- Lists
+- Or any other datatype depending on the operation performed.
+
+---
+
+# 💡 Expression vs Statement
+
+Many beginners confuse **Expressions** and **Statements**.
+
+Let's understand the difference.
+
+## Expression
+
+An expression **produces a value**.
+
+Example
+
+```python
+10 + 20
+```
+
+Output
+
+```
+30
+```
+
+---
+
+## Statement
+
+A statement **performs an action**.
+
+Example
+
+```python
+x = 10 + 20
+```
+
+Here,
+
+```python
+10 + 20
+```
+
+is an Expression,
+
+while
+
+```python
+x = 10 + 20
+```
+
+is a Statement because it assigns the result to a variable.
+
+---
+
+## Quick Comparison
+
+| Expression | Statement |
+|------------|-----------|
+| Produces a value | Performs an action |
+| `10 + 20` | `x = 10 + 20` |
+| Can exist inside another expression | Usually executes independently |
+
+---
+
+# 🤔 Why Do We Need Operators?
+
+Imagine programming without operators.
+
+Suppose you wanted to add two numbers.
+
+Instead of simply writing
+
+```python
+10 + 20
+```
+
+you would need to create a long manual procedure for every calculation.
+
+Similarly,
+
+to compare two values,
+
+instead of writing
+
+```python
+age > 18
+```
+
+you would have to write complicated logic every time.
+
+Operators make programming much easier by providing a simple and standard way to perform operations.
+
+They help us to:
+
+- Perform mathematical calculations
+- Assign values to variables
+- Compare values
+- Combine multiple conditions
+- Check object identity
+- Search values inside collections
+- Work with binary data
+
+Without operators, programming would become lengthy, repetitive, and difficult to understand.
+
+---
+
+# 💡 Why Do Programming Languages Use Symbols Instead of Words?
+
+A common question beginners ask is,
+
+> **"Why do programming languages use symbols like `+`, `-`, `*`, and `/` instead of words like Add, Subtract, Multiply, and Divide?"**
+
+The answer is simple.
+
+Programming languages are designed to be:
+
+- Short
+- Fast
+- Easy to write
+- Easy to read
+
+Imagine writing
+
+```text
+Add 10 and 20
+```
+
+instead of
+
+```python
+10 + 20
+```
+
+Or
+
+```text
+Multiply num1 with num2
+```
+
+instead of
+
+```python
+num1 * num2
+```
+
+Writing symbols is much shorter and easier.
+
+Another advantage is that these symbols are **standard across almost every programming language**.
+
+Whether you learn Python, Java, C, C++, JavaScript, or many other languages,
+
+the symbols
+
+```
++
+
+-
+
+*
+
+/
+
+==
+```
+
+work in almost the same way.
+
+Once you understand them in one language,
+
+they become easier to use in other programming languages as well.
+
+---
+
+# 📌 Remember
+
+```
+Operands
+
+↓
+
+Operator
+
+↓
+
+Expression
+
+↓
+
+Python Evaluates
+
+↓
+
+Result
+```
+
+Example
+
+```
+10 + 20
+
+│      │
+
+│      │
+
+Operand  Operand
+
+      +
+
+   Operator
+
+↓
+
+Expression
+
+↓
+
+30
+```
+
+---
+# 🧠 How Do Operators Work Internally?
+
+Until now, we have learned:
+
+- Variables store values.
+- Every value has a Data Type.
+- Operators perform operations on values.
+
+Now let's connect all these concepts together and understand **what actually happens inside the computer** when an operator is used.
+
+---
+
+## Example
+
+Suppose we write the following program.
+
+```python
+num1 = 10
+num2 = 20
+
+result = num1 + num2
+```
+
+Although it looks like only one addition operation,
+
+many things happen internally before the answer is produced.
+
+Let's understand them step by step.
+
+---
+
+# Step 1: Python Interpreter Starts
+
+When we run the program,
+
+```bash
+python program.py
+```
+
+the Python Interpreter starts reading the program **line by line**.
+
+```
+program.py
+
+        │
+
+        ▼
+
+Python Interpreter
+```
+
+Python is an **Interpreted Language**, so it executes one statement at a time.
+
+---
+
+# Step 2: Variables Are Created
+
+The interpreter reads
+
+```python
+num1 = 10
+```
+
+It understands
+
+> Create a variable named **num1** and store the value **10**.
+
+Then it identifies the datatype.
+
+```
+10
+
+↓
+
+Whole Number?
+
+↓
+
+YES
+
+↓
+
+Datatype = int
+```
+
+Now memory becomes
+
+```
+Computer RAM
+
++----------------------------------------+
+| Variable | Value | Datatype            |
++----------------------------------------+
+| num1     | 10    | int                 |
++----------------------------------------+
+```
+
+---
+
+The interpreter now reads
+
+```python
+num2 = 20
+```
+
+Again,
+
+```
+20
+
+↓
+
+Whole Number?
+
+↓
+
+YES
+
+↓
+
+Datatype = int
+```
+
+Memory now becomes
+
+```
+Computer RAM
+
++----------------------------------------+
+| Variable | Value | Datatype            |
++----------------------------------------+
+| num1     | 10    | int                 |
+| num2     | 20    | int                 |
++----------------------------------------+
+```
+
+---
+
+# Step 3: Interpreter Reads the Expression
+
+Now the interpreter reaches
+
+```python
+result = num1 + num2
+```
+
+The first thing it does is locate both variables in memory.
+
+```
+Computer RAM
+
+num1
+
+↓
+
+10
+
+num2
+
+↓
+
+20
+```
+
+Now Python knows
+
+```
+Operand 1 = 10
+
+Operand 2 = 20
+```
+
+---
+
+# Step 4: Interpreter Finds the Operator
+
+The interpreter now sees
+
+```
++
+```
+
+It immediately understands
+
+> Perform an **Addition Operation**.
+
+Since both operands are integers,
+
+Python performs integer addition.
+
+```
+10
+
++
+
+20
+
+↓
+
+30
+```
+
+The expression has now been evaluated.
+
+---
+
+# Step 5: Store the Result
+
+The result of the expression is
+
+```
+30
+```
+
+Now Python executes
+
+```python
+result = 30
+```
+
+A new variable is created.
+
+Memory becomes
+
+```
+Computer RAM
+
++----------------------------------------+
+| Variable | Value | Datatype            |
++----------------------------------------+
+| num1     | 10    | int                 |
+| num2     | 20    | int                 |
+| result   | 30    | int                 |
++----------------------------------------+
+```
+
+---
+
+# Complete Execution Flow
+
+The complete journey looks like this.
+
+```
+You Write Code
+
+        │
+
+        ▼
+
+Python File (.py)
+
+        │
+
+        ▼
+
+Python Interpreter
+
+        │
+
+        ▼
+
+Reads Variables
+
+        │
+
+        ▼
+
+Identifies Datatypes
+
+        │
+
+        ▼
+
+Finds Operands
+
+        │
+
+        ▼
+
+Finds Operator
+
+        │
+
+        ▼
+
+Evaluates Expression
+
+        │
+
+        ▼
+
+Produces Result
+
+        │
+
+        ▼
+
+Stores Result in Memory
+
+        │
+
+        ▼
+
+Continues to Next Line
+```
+
+---
+
+# 🔄 Relationship Between Variables, Data Types and Operators
+
+Variables, Data Types, and Operators always work together.
+
+Suppose we write
+
+```python
+salary = 25000 + 5000
+```
+
+The complete relationship looks like this.
+
+```
+Variable
+
+salary
+
+        ▲
+
+        │
+
+Stores
+
+        │
+
+        ▼
+
+Value
+
+30000
+
+        ▲
+
+        │
+
+Produced By
+
+        │
+
+        ▼
+
+Expression
+
+25000 + 5000
+
+        ▲
+
+        │
+
+Uses
+
+        │
+
+        ▼
+
+Operator
+
++
+
+        ▲
+
+        │
+
+Works On
+
+        │
+
+        ▼
+
+Operands
+
+25000     5000
+
+        ▲
+
+        │
+
+Both Have
+
+        │
+
+        ▼
+
+Datatype
+
+int
+```
+
+Everything in Python is connected.
+
+- Variables store values.
+- Values have Data Types.
+- Operators perform operations on values.
+- Expressions combine operators and operands.
+- The interpreter evaluates expressions and stores the result back into memory.
+
+---
+
+# 🌍 Real-World Analogy
+
+Imagine a calculator.
+
+```
+Input
+
+10
+
+20
+
++
+
+↓
+
+Calculator
+
+↓
+
+30
+
+↓
+
+Display
+```
+
+Python works in a very similar way.
+
+The only difference is that Python first stores the values in variables, then performs the operation, and finally stores the result back into memory.
+
+---
+
+# 📌 Remember
+
+```
+Variables
+
+↓
+
+Store
+
+↓
+
+Values
+
+↓
+
+Values have Datatypes
+
+↓
+
+Operators perform operations
+
+↓
+
+Expressions are evaluated
+
+↓
+
+Result is stored back into memory
+```
+
+Everything you've learned so far in Python follows this complete flow.
+
+---
+# 🌳 Classification of Python Operators
+
+Python provides different types of operators, and each operator is designed to perform a specific kind of operation.
+
+The classification of Python Operators is shown below.
+
+```
+Python Operators
+
+│
+
+├── Arithmetic Operators
+
+├── Assignment Operators
+
+├── Comparison (Relational) Operators
+
+├── Logical Operators
+
+├── Identity Operators
+
+├── Membership Operators
+
+└── Bitwise Operators
+```
+
+Let's understand each category one by one.
+
+---
+
+# ➕ 1. Arithmetic Operators
+
+Arithmetic Operators are used to perform **mathematical calculations** on values or variables.
+
+Python provides **7 Arithmetic Operators**.
+
+| Operator | Name | Description | Example |
+|:--------:|------|-------------|:-------:|
+| `+` | Addition | Adds two operands | `10 + 20` |
+| `-` | Subtraction | Subtracts right operand from left operand | `20 - 10` |
+| `*` | Multiplication | Multiplies two operands | `5 * 4` |
+| `/` | Division | Divides left operand by right operand | `20 / 5` |
+| `//` | Floor Division | Returns the floor (whole number) after division | `20 // 3` |
+| `%` | Modulus | Returns the remainder | `20 % 3` |
+| `**` | Exponentiation | Raises left operand to the power of right operand | `2 ** 3` |
+
+---
+
+## ➕ Addition (`+`)
+
+Performs addition between two operands.
+
+```python
+print(10 + 20)
+
+print(num1 + num2)
+```
+
+---
+
+## ➖ Subtraction (`-`)
+
+Subtracts the right operand from the left operand.
+
+```python
+print(50 - 20)
+
+print(num1 - num2)
+```
+
+---
+
+## ✖ Multiplication (`*`)
+
+Multiplies two operands.
+
+```python
+print(5 * 10)
+
+print(num1 * num2)
+```
+
+---
+
+## ➗ Division (`/`)
+
+Divides the left operand by the right operand.
+
+> **Note**
+>
+> Division (`/`) always returns a **float** value.
+
+Example
+
+```python
+print(20 / 2)
+```
+
+Output
+
+```text
+10.0
+```
+
+---
+
+## ➗ Floor Division (`//`)
+
+Returns the **largest whole number less than or equal to the actual result**.
+
+Example
+
+```python
+print(5 // 2)
+```
+
+Output
+
+```text
+2
+```
+
+Because
+
+```
+5 / 2 = 2.5
+
+↓
+
+Floor Value
+
+↓
+
+2
+```
+
+---
+
+## 🧮 Modulus (`%`)
+
+Returns the **remainder** after division.
+
+Example
+
+```python
+print(20 % 3)
+```
+
+Output
+
+```text
+2
+```
+
+---
+
+## 🔋 Exponentiation (`**`)
+
+Raises the left operand to the power of the right operand.
+
+Example
+
+```python
+print(2 ** 3)
+```
+
+Output
+
+```text
+8
+```
+
+Because
+
+```
+2 × 2 × 2 = 8
+```
+
+---
+
+# 📝 2. Assignment Operators
+
+Assignment Operators are used to **assign** or **update** values stored inside variables.
+
+Simply,
+
+> **An Assignment Operator stores the value on the right-hand side into the variable on the left-hand side.**
+
+For example,
+
+```python
+marks = 90
+```
+
+Python stores
+
+```
+90
+
+↓
+
+marks
+```
+
+inside memory.
+
+---
+
+## Why Do We Need Assignment Operators?
+
+Suppose we want to increase a student's marks by 10.
+
+Without assignment operators,
+
+```python
+marks = 90
+
+marks = marks + 10
+```
+
+This works perfectly.
+
+However,
+
+Python provides a shorter way.
+
+```python
+marks = 90
+
+marks += 10
+```
+
+Both programs produce the same result.
+
+Assignment Operators simply reduce the amount of code we write.
+
+---
+
+Python provides the following Assignment Operators.
+
+| Operator | Name | Example |
+|:--------:|------|:-------:|
+| `=` | Assign | `x = 10` |
+| `+=` | Add & Assign | `x += 5` |
+| `-=` | Subtract & Assign | `x -= 5` |
+| `*=` | Multiply & Assign | `x *= 5` |
+| `/=` | Divide & Assign | `x /= 5` |
+| `//=` | Floor Divide & Assign | `x //= 5` |
+| `%=` | Modulus & Assign | `x %= 5` |
+| `**=` | Exponent & Assign | `x **= 5` |
+
+---
+
+# ⚖️ 3. Comparison (Relational) Operators
+
+Comparison Operators compare two values or variables.
+
+The result is always either
+
+```
+True
+
+or
+
+False
+```
+
+Python provides six Comparison Operators.
+
+| Operator | Meaning | Example |
+|:--------:|---------|:-------:|
+| `==` | Equal To | `10 == 10` |
+| `!=` | Not Equal To | `10 != 20` |
+| `>` | Greater Than | `20 > 10` |
+| `<` | Less Than | `10 < 20` |
+| `>=` | Greater Than or Equal To | `20 >= 20` |
+| `<=` | Less Than or Equal To | `10 <= 20` |
+
+Examples
+
+```python
+print(10 == 10)
+
+print(10 != 20)
+
+print(20 > 10)
+
+print(10 < 20)
+
+print(20 >= 20)
+
+print(10 <= 20)
+```
+
+---
+
+# 🔗 4. Logical Operators
+
+Logical Operators combine multiple conditions.
+
+Python provides three Logical Operators.
+
+| Operator | Description |
+|:--------:|-------------|
+| `and` | Returns `True` only if both conditions are True |
+| `or` | Returns `True` if at least one condition is True |
+| `not` | Reverses the Boolean result |
+
+Examples
+
+```python
+x = 5
+
+print(x > 2 and x < 10)
+
+print(x > 10 or x < 10)
+
+print(not(x < 5))
+```
+
+---
+
+# 🪞 5. Identity Operators
+
+Identity Operators compare **objects in memory**, not just their values.
+
+Python provides two Identity Operators.
+
+| Operator | Description |
+|:--------:|-------------|
+| `is` | Returns True if both variables refer to the same object |
+| `is not` | Returns True if both variables refer to different objects |
+
+Examples
+
+```python
+print(a is b)
+
+print(a is not b)
+```
+
+> **💡 Note**
+>
+> We'll understand the difference between **`==`** and **`is`** in the next section because many beginners confuse these two operators.
+
+---
+
+# 🔍 6. Membership Operators
+
+Membership Operators check whether a value exists inside a collection.
+
+Python provides two Membership Operators.
+
+| Operator | Description |
+|:--------:|-------------|
+| `in` | Returns True if the value exists |
+| `not in` | Returns True if the value does not exist |
+
+Examples
+
+```python
+print("Python" in languages)
+
+print(100 not in marks)
+```
+
+Membership Operators are commonly used with
+
+- Lists
+- Tuples
+- Strings
+- Dictionaries
+- Sets
+
+---
+
+# ⚙️ 7. Bitwise Operators
+
+Bitwise Operators perform operations directly on the **binary representation** of numbers.
+
+Instead of working with decimal numbers,
+
+they work with **0s and 1s (bits)**.
+
+Python provides six Bitwise Operators.
+
+| Operator | Meaning |
+|:--------:|---------|
+| `&` | AND |
+| `\|` | OR |
+| `^` | XOR |
+| `~` | NOT |
+| `<<` | Left Shift |
+| `>>` | Right Shift |
+
+---
+
+## 💡 Remember
+
+```
+x << n
+
+=
+
+x × (2ⁿ)
+```
+
+Example
+
+```python
+5 << 1
+```
+
+```
+5 × 2¹
+
+=
+
+10
+```
+
+---
+
+Similarly,
+
+```
+x >> n
+
+=
+
+x // (2ⁿ)
+```
+
+Example
+
+```python
+20 >> 2
+```
+
+```
+20 // 4
+
+=
+
+5
+```
+
+We'll understand Bitwise Operators in much more detail while learning **Networking**, **Cybersecurity**, and **Binary Data Processing**.
+
+---
+# 🧠 Equality (`==`) vs Identity (`is`)
+
+Many beginners think that **`==`** and **`is`** do the same job.
+
+Actually, they are completely different.
+
+Let's understand the difference.
+
+---
+
+## `==` (Equality Operator)
+
+The **Equality Operator (`==`)** compares the **values** of two objects.
+
+It asks:
+
+> **"Do these two objects contain the same value?"**
+
+Example
+
+```python
+a = [10, 20, 30]
+b = [10, 20, 30]
+
+print(a == b)
+```
+
+Output
+
+```text
+True
+```
+
+Both lists contain exactly the same values.
+
+So,
+
+```
+a == b
+
+↓
+
+Compare Values
+
+↓
+
+True
+```
+
+---
+
+## `is` (Identity Operator)
+
+The **Identity Operator (`is`)** compares the **memory locations** (objects) of two variables.
+
+It asks:
+
+> **"Are these two variables referring to the exact same object in memory?"**
+
+Example
+
+```python
+a = [10, 20, 30]
+b = [10, 20, 30]
+
+print(a is b)
+```
+
+Output
+
+```text
+False
+```
+
+Although both lists contain the same values,
+
+Python creates two different objects in memory.
+
+```
+Computer RAM
+
+a
+
+↓
+
+[10,20,30]
+
+
+
+b
+
+↓
+
+[10,20,30]
+```
+
+Different memory locations
+
+↓
+
+`is`
+
+↓
+
+False
+
+---
+
+## Example of `is` Returning True
+
+```python
+a = [10, 20]
+
+b = a
+
+print(a is b)
+```
+
+Output
+
+```text
+True
+```
+
+Memory
+
+```
+Computer RAM
+
+a
+
+┐
+
+│
+
+▼
+
+[10,20]
+
+▲
+
+│
+
+┘
+
+b
+```
+
+Now both variables point to the **same object**.
+
+Therefore,
+
+```
+a is b
+
+↓
+
+True
+```
+
+---
+
+## 📌 Remember
+
+```
+==
+
+↓
+
+Compares Values
+
+
+is
+
+↓
+
+Compares Memory Objects
+```
+
+---
+
+# 📐 Operator Precedence
+
+Sometimes,
+
+a single expression contains multiple operators.
+
+Example
+
+```python
+2 + 3 * 5
+```
+
+Now the question is,
+
+Should Python perform
+
+```
+2 + 3
+
+↓
+
+5 × 5
+
+↓
+
+25
+```
+
+or
+
+```
+3 × 5
+
+↓
+
+15
+
+↓
+
+2 + 15
+
+↓
+
+17
+```
+
+To remove this confusion,
+
+Python follows **Operator Precedence Rules**.
+
+Operator Precedence tells Python
+
+> **Which operator should be executed first.**
+
+---
+
+## Example
+
+```python
+2 + 3 * 5
+```
+
+Interpreter
+
+```
+*
+
+↓
+
+15
+
+↓
+
++
+
+↓
+
+17
+```
+
+Output
+
+```text
+17
+```
+
+because
+
+Multiplication has higher precedence than Addition.
+
+---
+
+## Common Operator Precedence
+
+Python evaluates operators in the following order (Highest → Lowest).
+
+| Priority | Operator |
+|:--------:|----------|
+| 1 | `()` Parentheses |
+| 2 | `**` Exponentiation |
+| 3 | `+x`, `-x`, `~x` (Unary Operators) |
+| 4 | `*`, `/`, `//`, `%` |
+| 5 | `+`, `-` |
+| 6 | `<<`, `>>` |
+| 7 | `&` |
+| 8 | `^` |
+| 9 | `|` |
+| 10 | Comparison Operators |
+| 11 | `not` |
+| 12 | `and` |
+| 13 | `or` |
+
+---
+
+## 📌 Tip
+
+Whenever an expression becomes confusing,
+
+use **Parentheses**.
+
+Example
+
+```python
+(2 + 3) * 5
+```
+
+Output
+
+```
+25
+```
+
+Parentheses always execute first.
+
+---
+
+# 🔄 Associativity
+
+Sometimes,
+
+multiple operators have the **same precedence**.
+
+In such cases,
+
+Python follows **Associativity Rules**.
+
+Associativity tells Python
+
+> **Which direction to evaluate operators having the same precedence.**
+
+---
+
+## Left-to-Right Associativity
+
+Most operators are evaluated
+
+```
+Left
+
+↓
+
+Right
+```
+
+Example
+
+```python
+20 - 5 - 3
+```
+
+Interpreter
+
+```
+20 - 5
+
+↓
+
+15
+
+↓
+
+15 - 3
+
+↓
+
+12
+```
+
+Output
+
+```text
+12
+```
+
+---
+
+## Right-to-Left Associativity
+
+Exponentiation (`**`) is evaluated
+
+```
+Right
+
+↓
+
+Left
+```
+
+Example
+
+```python
+2 ** 3 ** 2
+```
+
+Interpreter
+
+```
+3 ** 2
+
+↓
+
+9
+
+↓
+
+2 ** 9
+
+↓
+
+512
+```
+
+Output
+
+```text
+512
+```
+
+---
+
+# 📌 Remember
+
+```
+Precedence
+
+↓
+
+Which Operator First?
+
+
+Associativity
+
+↓
+
+Which Direction?
+```
+
+---
+
+<details>
+
+<summary>
+
+## 🎁 Bonus Tips
+
+</summary>
+
+---
+
+# ⭐ Chained Comparisons
+
+Python allows multiple comparisons in a single statement.
+
+Instead of writing
+
+```python
+age = 20
+
+print(age > 18 and age < 30)
+```
+
+Python allows
+
+```python
+age = 20
+
+print(18 < age < 30)
+```
+
+Output
+
+```text
+True
+```
+
+This feature is called **Chained Comparison**.
+
+It makes code shorter and easier to read.
+
+---
+
+# ⭐ Short-Circuit Evaluation
+
+Logical operators sometimes stop evaluating expressions early.
+
+This is called **Short-Circuit Evaluation**.
+
+---
+
+## Example 1
+
+```python
+False and print("Hello")
+```
+
+Output
+
+```text
+False
+```
+
+Python never executes
+
+```python
+print("Hello")
+```
+
+because
+
+```
+False AND Anything
+
+↓
+
+Always False
+```
+
+So Python immediately returns `False`.
+
+---
+
+## Example 2
+
+```python
+True or print("Hello")
+```
+
+Output
+
+```text
+True
+```
+
+Again,
+
+Python never executes
+
+```python
+print("Hello")
+```
+
+because
+
+```
+True OR Anything
+
+↓
+
+Always True
+```
+
+Python already knows the final answer.
+
+So it skips the remaining expression.
+
+This behavior makes programs faster and avoids unnecessary computations.
+
+---
+
+</details>
+
+---
+
+# 📊 Operator Summary
+
+| Category | Operators |
+|-----------|-----------|
+| Arithmetic | `+` `-` `*` `/` `//` `%` `**` |
+| Assignment | `=` `+=` `-=` `*=` `/=` `//=` `%=` `**=` |
+| Comparison | `==` `!=` `>` `<` `>=` `<=` |
+| Logical | `and` `or` `not` |
+| Identity | `is` `is not` |
+| Membership | `in` `not in` |
+| Bitwise | `&` `\|` `^` `~` `<<` `>>` |
+
+---
+
+# 💻 Practice Programs
+
+To understand Python Operators from **Beginner → Advanced** with detailed explanations and commented programs, visit:
+
+🔗 **Nagabasha's GitHub Repository**
+
+https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/operators_BasicToAdvanced.py
+
+---
+
+</details>
