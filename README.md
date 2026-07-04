@@ -335,10 +335,7 @@ Compared to languages like Java or C#, Python's enterprise database ecosystem is
 
 <details>
 <summary>
-
-## 📖 Module 01 • Python Installation & Setup
-
-
+<b>📖 Module 01 • Python Installation & Setup</b>
 </summary>
 
 ---
