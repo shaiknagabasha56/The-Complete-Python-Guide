@@ -4892,26 +4892,7 @@ they **cannot** be used as:
 - Function names
 - Class names
 - Or any other user-defined identifier
-
-Some common examples are:
-
-```python
-if
-else
-elif
-for
-while
-break
-continue
-def
-return
-class
-True
-False
-None
-```
-
----
+ ---
 
 # 🔒 Why Are They Called Reserved Keywords?
 
@@ -5007,100 +4988,7 @@ it understands,
 
 Every keyword tells the interpreter to perform a specific task.
 
-Some examples are shown below.
-
-| Keyword | Purpose |
-|----------|---------|
-| `if`, `elif`, `else` | Conditional Statements |
-| `for`, `while` | Loops |
-| `break`, `continue` | Loop Control |
-| `def` | Function Definition |
-| `class` | Class Definition |
-| `return` | Return a Value from a Function |
-| `import`, `from`, `as` | Import Modules |
-| `try`, `except`, `finally`, `raise` | Exception Handling |
-| `True`, `False`, `None` | Special Constant Values |
-
-Simply,
-
 Keywords are the **grammar rules** of Python.
-
----
-
-# 🌍 Real-World Analogy
-
-Imagine learning English.
-
-To form a correct sentence,
-
-we follow grammar rules.
-
-Example,
-
-```
-I am learning Python.
-```
-
-This sentence is meaningful because it follows English grammar.
-
-Now imagine writing
-
-```
-Learning Python am I.
-```
-
-Although the words are the same,
-
-the sentence becomes confusing because the grammar is incorrect.
-
-Python works in exactly the same way.
-
-Instead of English grammar,
-
-Python has its own grammar,
-
-and **Keywords are the words that define that grammar.**
-
-Without them,
-
-Python would simply see a collection of words and symbols,
-
-without knowing what they actually mean.
-
----
-
-# 📌 Remember
-
-```
-Keywords
-
-↓
-
-Reserved by Python
-
-↓
-
-Have Fixed Meaning
-
-↓
-
-Define Python Grammar
-
-↓
-
-Cannot Be Used
-
-as
-
-Variables,
-
-Functions,
-
-Classes,
-
-or Other Identifiers
-```
-
 ---
 # 🧠 How Does the Python Interpreter Recognize Keywords?
 
@@ -5352,48 +5240,6 @@ That's why Keywords are **not stored in RAM like variables or objects**.
 They already exist as part of the Python language itself.
 
 ---
-
-# 📌 Remember
-
-```
-Python Program
-
-        │
-
-        ▼
-
-Interpreter Reads Code
-
-        │
-
-        ▼
-
-Checks Reserved Keyword List
-
-        │
-
- ┌──────┴────────┐
- │               │
-
- ▼               ▼
-
-Keyword?      Identifier?
-
- │               │
-
- ▼               ▼
-
-Special      Variable /
-Meaning      Function /
-              Class
-
-        │
-
-        ▼
-
-Continue Execution
-```
-
 **Always remember:**
 
 - Keywords are **predefined words** built into the Python Interpreter.
@@ -5594,16 +5440,6 @@ print()
 input()
 
 len()
-
-type()
-
-range()
-
-sum()
-
-max()
-
-min()
 ```
 
 These are called **Built-in Functions**.
@@ -5681,96 +5517,12 @@ Although Python allows this,
 it is considered a **bad programming practice**.
 
 You should **never** use the names of built-in functions as variables.
-
----
-
-# 📌 Remember
-
-```
-Keywords
-
-↓
-
-Reserved by Python
-
-↓
-
-Define Grammar
-
-↓
-
-Cannot Be Renamed
-
-
-
-Identifiers
-
-↓
-
-Created by Programmers
-
-↓
-
-Used to Name Variables,
-Functions,
-Classes, etc.
-
-
-
-Built-in Functions
-
-↓
-
-Provided by Python
-
-↓
-
-Perform Useful Tasks
-
-↓
-
-Should Not Be Used
-as Variable Names
-```
-
 ---
 # 🌳 Classification of Python Keywords
 
 Python provides different keywords, and each keyword has a specific purpose.
 
 Instead of memorizing all keywords together, we can classify them into different categories based on what they do.
-
-```
-Python Keywords
-
-│
-
-├── Conditional Keywords
-
-├── Loop Keywords
-
-├── Function Keywords
-
-├── Class & Object Keywords
-
-├── Exception Handling Keywords
-
-├── Import Keywords
-
-├── Boolean & Special Value Keywords
-
-├── Variable Scope Keywords
-
-├── Logical Operator Keywords
-
-├── Asynchronous Programming Keywords
-
-└── Miscellaneous Keywords
-```
-
-Let's understand each category one by one.
-
----
 
 # 1️⃣ Conditional Keywords
 
@@ -5975,63 +5727,6 @@ Some keywords don't fit into the previous categories but are still important.
 | `in` | Checks membership inside a collection |
 
 We'll study these keywords in detail when learning their respective topics.
-
----
-
-# 📌 Remember
-
-```
-Python Keywords
-
-↓
-
-Grouped by Purpose
-
-↓
-
-Conditional
-
-↓
-
-Loops
-
-↓
-
-Functions
-
-↓
-
-Classes
-
-↓
-
-Exceptions
-
-↓
-
-Imports
-
-↓
-
-Boolean Values
-
-↓
-
-Variable Scope
-
-↓
-
-Logical Operators
-
-↓
-
-Async Programming
-
-↓
-
-Miscellaneous
-```
-
 ---
 # ⚠️ What Happens If Keywords Didn't Exist?
 
@@ -6251,39 +5946,6 @@ False
 because **`print()` is a Built-in Function**, not a Python Keyword.
 
 ---
-
-# 🎯 What You've Learned
-
-After completing this module, you should now be able to:
-
-- ✅ Explain what Python Keywords are.
-- ✅ Understand why they are called Reserved Keywords.
-- ✅ Explain why Python needs Keywords.
-- ✅ Understand how the Python Interpreter recognizes Keywords.
-- ✅ Explain why Keywords do not occupy memory like variables.
-- ✅ Differentiate between Keywords, Identifiers, and Built-in Functions.
-- ✅ Classify Python Keywords based on their purpose.
-- ✅ Explain what would happen if Keywords didn't exist.
-- ✅ Display all Keywords using the `keyword` module.
-- ✅ Check whether a word is a Keyword using `keyword.iskeyword()`.
-
----
-
-# ⚡ Quick Revision
-
-| Concept | One-Line Explanation |
-|----------|----------------------|
-| **Keyword** | A reserved word with a predefined meaning in Python. |
-| **Reserved Keyword** | A word already reserved by Python and cannot be used as an identifier. |
-| **Identifier** | A user-defined name for variables, functions, classes, etc. |
-| **Built-in Function** | A predefined function provided by Python to perform a specific task. |
-| **Keyword Module** | A built-in module used to access Python Keywords. |
-| **`keyword.kwlist`** | Returns the list of all Python Keywords. |
-| **`len(keyword.kwlist)`** | Returns the total number of Keywords. |
-| **`keyword.iskeyword()`** | Checks whether a word is a Python Keyword. |
-
----
-
 # 💻 Practice Programs
 
 To understand **Python Keywords** from **Beginner → Advanced** with detailed explanations and well-commented programs, visit:
