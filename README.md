@@ -524,3 +524,188 @@ Python is now successfully installed on your Mac.
 ---
 
 </details>
+
+
+
+<details>
+<summary>
+<b>Module 02 • Python Syntax & Hello World</b>
+</summary>
+
+---
+
+# ❓ What is Python Syntax?
+
+Generally, when we write an English sentence, we follow grammatical rules. If everyone used their own grammar rules, only the writer would understand the sentence, while others would find it confusing.
+
+To make communication possible, everyone follows a common set of English grammar rules.
+
+Python works in the same way.
+
+**Python syntax** is a set of rules that defines how Python code must be written so that the Python interpreter can understand and execute it correctly.
+
+Just like English sentences follow grammar rules, every Python statement follows its own syntax rules.
+
+---
+
+## ✅ Example (Correct Syntax)
+
+Below is the correct syntax for an `if-else` statement in Python (don't worry, we'll learn it in detail later).
+
+```python
+if condition:
+    # statements
+else:
+    # statements
+```
+
+---
+
+## ❌ What Happens If I Write My Own Syntax?
+
+Suppose you write:
+
+```python
+if condition,  # statements:
+else,  # statements
+```
+
+The Python interpreter checks the syntax before executing the program.
+
+Since the above code does not follow Python's syntax rules, the interpreter generates a **Syntax Error**, and the program will not execute.
+
+---
+
+# 👋 Our First "Hello World" Program
+
+The "Hello World" program is traditionally the first program beginners write when learning a new programming language.
+
+## Step 1
+
+Open **Visual Studio Code (VS Code)**.
+
+---
+
+## Step 2
+
+Install the **Python Extension**.
+
+- Click the **Extensions** icon on the left sidebar.
+- Search for **Python**.
+- Click **Install**.
+
+---
+
+## Step 3
+
+Create a new Python file.
+
+```
+File
+   ↓
+New File
+   ↓
+Save As
+   ↓
+helloWorld.py
+```
+
+---
+
+## Step 4
+
+Write the following code:
+
+```python
+print("Hello, World!")
+```
+
+---
+
+## Step 5
+
+Run the program.
+
+Click the **▶ Run** button located at the top-right corner of VS Code.
+
+---
+
+## Step 6
+
+View the output.
+
+The output appears in the terminal.
+
+```text
+Hello, World!
+```
+
+---
+
+## Step 7
+
+🎉 Congratulations!
+
+You have successfully written and executed your first Python program.
+
+---
+
+# 🖨️ Understanding the `print()` Function
+
+The **Hello World** program is traditionally the first program beginners write when learning a new programming language because it helps you:
+
+- Confirm that Python is installed correctly.
+- Verify that your development environment is working.
+- Learn the most basic syntax for displaying output.
+
+The `print()` function is used to display text, numbers, variables, or other data on the screen (terminal).
+
+---
+
+## Full Syntax of `print()`
+
+> **Note:** This syntax is rarely used in everyday programming.
+
+```python
+print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+```
+
+---
+
+## Basic Syntax of `print()`
+
+This is the syntax you'll use most of the time.
+
+```python
+print(value)
+```
+
+or
+
+```python
+print("Hello, World!")
+```
+
+---
+
+Using the `print()` function, you can:
+
+- Display text
+- Display numbers
+- Display variables
+- Perform mathematical operations
+- Display multiple values
+
+---
+
+## 📚 Practice More
+
+Click the link below to learn the **`print()` function** from beginner to advanced level with plenty of examples.
+
+🔗 **Nagabasha's GitHub Repository**
+
+https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/print_Function_BasicToAdvanced.py
+
+---
+
+</details>
