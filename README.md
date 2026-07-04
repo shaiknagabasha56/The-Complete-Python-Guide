@@ -725,11 +725,6 @@ Since the above code does not follow Python's syntax rules, the interpreter gene
 # 👋 Our First "Hello World" Program
 
 The "Hello World" program is traditionally the first program beginners write when learning a new programming language.
-## Step 0
-
-Download **Visual Studio Code (VS Code)**. from the app store or from the offic
-
----
 ## Step 1
 
 Open **Visual Studio Code (VS Code)**.
@@ -800,7 +795,7 @@ You have successfully written and executed your first Python program.
 
 ---
 
-# 🖨️ Understanding the `print()` Function
+# 🖨️ Understanding the Hello World Program and `print()` Function
 
 The **Hello World** program is traditionally the first program beginners write when learning a new programming language because it helps you:
 
@@ -812,7 +807,7 @@ The `print()` function is used to display text, numbers, variables, or other dat
 
 ---
 
-## Full Syntax of `print()`
+# Full Syntax of `print()`
 
 > **Note:** This syntax is rarely used in everyday programming.
 
@@ -830,7 +825,7 @@ This is the syntax you'll use most of the time.
 print(value)
 ```
 
-or
+example:
 
 ```python
 print("Hello, World!")
