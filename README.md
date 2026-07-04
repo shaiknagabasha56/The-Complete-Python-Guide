@@ -338,7 +338,6 @@ Compared to languages like Java or C#, Python's enterprise database ecosystem is
 
 ## 📖 Module 01 • Python Installation & Setup
 
-Install Python on Windows, Linux, and macOS, and understand why Python needs to be installed before writing programs.
 
 </summary>
 
