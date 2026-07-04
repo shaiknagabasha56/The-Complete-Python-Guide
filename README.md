@@ -2942,11 +2942,7 @@ https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/datatype
 
 <details>
 <summary>
-
-## 📖 Module 05 • Operators
-
-Learn what operators are, why they are important, how Python performs operations, and how expressions are evaluated.
-
+<b>📖 Module 05 • Operators</b>
 </summary>
 
 ---
