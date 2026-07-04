@@ -70,7 +70,7 @@ Happy Learning! 🚀
 
 | Module | Module Name | Estimated Reading Time |
 |:------:|-------------|:----------------------:|
-| 00 | Introduction to the Course | 5 min |
+| 00 | History of Python | 20 min |
 | 01 | History of Python | 20 min |
 | 02 | Python Installation & Setup | 15 min |
 | 03 | Python Syntax & Hello World | 15 min |
