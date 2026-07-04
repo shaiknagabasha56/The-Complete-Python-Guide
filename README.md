@@ -330,3 +330,201 @@ Python is rarely used for operating systems, embedded firmware, or hardware-leve
 
 Compared to languages like Java or C#, Python's enterprise database ecosystem is less mature.
 </details>
+
+
+
+<details>
+<summary>
+
+## 📖 Module 01 • Python Installation & Setup
+
+Install Python on Windows, Linux, and macOS, and understand why Python needs to be installed before writing programs.
+
+</summary>
+
+---
+
+# 🤔 Why Should We Install Python on Our Computer?
+
+Generally, we write Python code in any code editor and save it in a file with the **`.py`** extension.
+
+However, our computer **cannot understand** a `.py` file because it only understands **0s and 1s (Machine Language / Low-Level Language)**, whereas our Python program is written using **English-like statements (High-Level Language)**.
+
+So, we need a **Python Interpreter** that converts our Python code (High-Level Language) into Machine Language (Low-Level Language) so that the computer can execute it.
+
+Without installing Python, our computer doesn't know how to execute a Python program.
+
+Apart from converting Python code into machine language, installing Python also allows us to:
+
+- ✅ Detect syntax errors
+- ✅ Debug Python programs
+- ✅ Use Python's built-in libraries
+- ✅ Install external Python packages using `pip`
+- ✅ Run Python programs from the terminal
+- ✅ Develop real-world Python applications
+
+That's why installing Python is the very first step before learning Python programming.
+
+---
+
+# 🖥️ How to Install Python on Windows
+
+### Step 1
+
+Visit the official Python website:
+
+👉 https://www.python.org/downloads/
+
+---
+
+### Step 2
+
+Click the **"Download Python"** button.
+
+The website automatically detects your operating system and downloads the latest stable version.
+
+---
+
+### Step 3
+
+Open the downloaded **`.exe`** installer.
+
+---
+
+### Step 4 (Very Important)
+
+Before clicking **Install Now**, make sure to check:
+
+```
+✅ Add Python to PATH
+```
+
+This allows you to run Python from **Command Prompt**, **PowerShell**, and other terminals.
+
+> **Don't skip this step.**
+
+---
+
+### Step 5
+
+Click
+
+```
+Install Now
+```
+
+and wait for the installation to complete.
+
+---
+
+### Step 6
+
+Click
+
+```
+Close
+```
+
+after the installation finishes.
+
+---
+
+### Step 7 — Verify Installation
+
+Open **Command Prompt** and run:
+
+```bash
+python --version
+```
+
+If you see an output similar to:
+
+```text
+Python 3.13.x
+```
+
+then Python has been installed successfully.
+
+---
+
+# 🐧 How to Install Python on Linux (Ubuntu/Debian)
+
+### Step 1
+
+Open the terminal and run:
+
+```bash
+sudo apt update
+
+sudo apt install python3
+
+sudo apt install python3-pip
+```
+
+---
+
+### Step 2 — Verify Installation
+
+Check the Python version:
+
+```bash
+python3 --version
+```
+
+Check the pip version:
+
+```bash
+pip3 --version
+```
+
+If you see something similar to:
+
+```text
+Python 3.13.x
+```
+
+then Python has been installed successfully.
+
+---
+
+# 🍎 How to Install Python on macOS
+
+### Step 1
+
+Visit:
+
+👉 https://www.python.org/downloads/
+
+---
+
+### Step 2
+
+Download the latest macOS installer (`.pkg`).
+
+---
+
+### Step 3
+
+Open the downloaded installer and follow the installation wizard.
+
+```
+Next
+↓
+
+Next
+↓
+
+Install
+```
+
+---
+
+### Step 4
+
+Wait for the installation to complete.
+
+Python is now successfully installed on your Mac.
+
+---
+
+</details>
