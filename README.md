@@ -522,6 +522,152 @@ Wait for the installation to complete.
 Python is now successfully installed on your Mac.
 
 ---
+<details>
+<summary><b>💻 VS Code Download</b></summary>
+
+<br>
+
+Choose your operating system to view the installation steps.
+
+---
+
+<details>
+<summary><b>🪟 For Windows</b></summary>
+
+### Step 1
+
+Visit the official Visual Studio Code website:
+
+👉 https://code.visualstudio.com/
+
+---
+
+### Step 2
+
+Click **Download for Windows**.
+
+---
+
+### Step 3
+
+Open the downloaded `.exe` installer.
+
+---
+
+### Step 4
+
+Follow the installation wizard.
+
+```
+Next
+↓
+
+I Accept the Agreement
+↓
+
+Next
+↓
+
+Install
+```
+
+---
+
+### Step 5 (Recommended)
+
+Make sure these options are checked:
+
+- ✅ Add "Open with Code" to Windows Explorer
+- ✅ Add to PATH (if available)
+
+---
+
+### Step 6
+
+Click **Finish**.
+
+🎉 VS Code is now installed successfully.
+
+</details>
+
+---
+
+<details>
+<summary><b>🐧 For Linux (Ubuntu/Debian)</b></summary>
+
+### Method 1 (Recommended)
+
+Open the terminal and run:
+
+```bash
+sudo apt update
+sudo apt install wget gpg
+
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+
+echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
+
+sudo apt update
+
+sudo apt install code
+```
+
+---
+
+### Verify Installation
+
+```bash
+code --version
+```
+
+If a version number is displayed, VS Code has been installed successfully.
+
+</details>
+
+---
+
+<details>
+<summary><b>🍎 For macOS</b></summary>
+
+### Step 1
+
+Visit:
+
+👉 https://code.visualstudio.com/
+
+---
+
+### Step 2
+
+Click **Download for macOS**.
+
+---
+
+### Step 3
+
+Open the downloaded ZIP file.
+
+---
+
+### Step 4
+
+Drag **Visual Studio Code** into the **Applications** folder.
+
+---
+
+### Step 5
+
+Launch VS Code from **Applications**.
+
+🎉 VS Code is now installed successfully.
+
+</details>
+
+</details>
+
+</details>
 
 </details>
 
@@ -529,7 +675,7 @@ Python is now successfully installed on your Mac.
 
 <details>
 <summary>
-<b>Module 02 • Python Syntax & Hello World</b>
+<b>📖 Module 02 • Python Syntax & Hello World</b>
 </summary>
 
 ---
@@ -579,7 +725,11 @@ Since the above code does not follow Python's syntax rules, the interpreter gene
 # 👋 Our First "Hello World" Program
 
 The "Hello World" program is traditionally the first program beginners write when learning a new programming language.
+## Step 0
 
+Download **Visual Studio Code (VS Code)**. from the app store or from the offic
+
+---
 ## Step 1
 
 Open **Visual Studio Code (VS Code)**.
