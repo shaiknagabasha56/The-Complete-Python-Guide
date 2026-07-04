@@ -79,7 +79,7 @@ Happy Learning! 🚀
 | 06 | Keywords | 20 min |
 | 07 | Comments | 60 min |
 | 08 | Type Conversion & Type Casting | 25 min |
-| 09 | Operators | 50 min |
+| 09 | Input & Output | 50 min |
 | 10 | Conditional Statements | 45 min |
 | 11 | Loops | 60 min |
 | 12 | Strings | 90 min |
