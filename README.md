@@ -4859,3 +4859,1438 @@ https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/operator
 ---
 
 </details>
+
+
+
+
+<details>
+<summary>
+<b>📖 Module 06 • Keywords</b>
+</summary>
+
+---
+
+# ❓ What is a Keyword in Python?
+
+As we learned in the **Variables** module, we cannot use certain words such as `if`, `for`, `while`, or `True` as variable names.
+
+These special words are called **Keywords**.
+
+Simply,
+
+> **A Keyword is a reserved word in Python that has a predefined meaning to the language.**
+
+Every keyword has a specific purpose.
+
+Python's interpreter uses these keywords to understand the **structure and grammar** of your program.
+
+Since these words already have a fixed meaning,
+
+they **cannot** be used as:
+
+- Variable names
+- Function names
+- Class names
+- Or any other user-defined identifier
+
+Some common examples are:
+
+```python
+if
+else
+elif
+for
+while
+break
+continue
+def
+return
+class
+True
+False
+None
+```
+
+---
+
+# 🔒 Why Are They Called Reserved Keywords?
+
+A common question beginners ask is,
+
+> **"Why are they called Reserved Keywords?"**
+
+The answer is simple.
+
+These words are already **reserved by Python** for its own use.
+
+This means,
+
+Python has already assigned a specific meaning to them.
+
+Since they are reserved,
+
+we are not allowed to use them for our own purposes.
+
+For example,
+
+```python
+if = 100
+```
+
+Python immediately generates an error because the word `if` is already reserved for writing conditional statements.
+
+Similarly,
+
+```python
+class = "Student"
+```
+
+This also generates an error because `class` is reserved for creating classes.
+
+Think of it like a reserved parking space.
+
+```
+Parking Area
+
+┌──────────────┐
+
+│ Reserved     │
+
+│     CEO      │
+
+└──────────────┘
+```
+
+Even if the parking space is empty,
+
+other employees are **not allowed** to park there because it has already been reserved.
+
+Python Keywords work in exactly the same way.
+
+They are already reserved by the Python language,
+
+so programmers cannot use them as variable names or identifiers.
+
+---
+
+# 🤔 Why Do We Need Keywords?
+
+Keywords define the **grammar (syntax)** of the Python language.
+
+Without keywords,
+
+the Python Interpreter would not know how to understand your program.
+
+For example,
+
+when Python sees
+
+```python
+if age > 18:
+```
+
+it immediately understands,
+
+> **"A conditional statement starts here."**
+
+Similarly,
+
+when Python sees
+
+```python
+for i in range(5):
+```
+
+it understands,
+
+> **"A loop starts here."**
+
+Every keyword tells the interpreter to perform a specific task.
+
+Some examples are shown below.
+
+| Keyword | Purpose |
+|----------|---------|
+| `if`, `elif`, `else` | Conditional Statements |
+| `for`, `while` | Loops |
+| `break`, `continue` | Loop Control |
+| `def` | Function Definition |
+| `class` | Class Definition |
+| `return` | Return a Value from a Function |
+| `import`, `from`, `as` | Import Modules |
+| `try`, `except`, `finally`, `raise` | Exception Handling |
+| `True`, `False`, `None` | Special Constant Values |
+
+Simply,
+
+Keywords are the **grammar rules** of Python.
+
+---
+
+# 🌍 Real-World Analogy
+
+Imagine learning English.
+
+To form a correct sentence,
+
+we follow grammar rules.
+
+Example,
+
+```
+I am learning Python.
+```
+
+This sentence is meaningful because it follows English grammar.
+
+Now imagine writing
+
+```
+Learning Python am I.
+```
+
+Although the words are the same,
+
+the sentence becomes confusing because the grammar is incorrect.
+
+Python works in exactly the same way.
+
+Instead of English grammar,
+
+Python has its own grammar,
+
+and **Keywords are the words that define that grammar.**
+
+Without them,
+
+Python would simply see a collection of words and symbols,
+
+without knowing what they actually mean.
+
+---
+
+# 📌 Remember
+
+```
+Keywords
+
+↓
+
+Reserved by Python
+
+↓
+
+Have Fixed Meaning
+
+↓
+
+Define Python Grammar
+
+↓
+
+Cannot Be Used
+
+as
+
+Variables,
+
+Functions,
+
+Classes,
+
+or Other Identifiers
+```
+
+---
+# 🧠 How Does the Python Interpreter Recognize Keywords?
+
+A common question every beginner asks is,
+
+> **"How does Python know that `if` is a keyword but `age` is just a variable?"**
+
+The answer is simple.
+
+Python already contains a **predefined list of reserved keywords** inside its Interpreter.
+
+Whenever we run a Python program, the Interpreter reads our code **word by word** and checks whether each word is present in this reserved keyword list.
+
+If the word is found,
+
+Python treats it as a **Keyword**.
+
+Otherwise,
+
+Python treats it as an **Identifier** (such as a variable, function, or class name).
+
+---
+
+## Internal Working
+
+Suppose we write the following program.
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible")
+```
+
+When the program starts,
+
+the Python Interpreter reads the code one word at a time.
+
+```
+You Write Code
+
+        │
+
+        ▼
+
+Python Interpreter
+
+        │
+
+        ▼
+
+Reads Each Word
+
+        │
+
+        ▼
+
+Checks Reserved Keyword List
+
+        │
+
+   ┌────┴────┐
+   │         │
+   ▼         ▼
+
+Keyword?   Not a Keyword
+
+   │         │
+
+   ▼         ▼
+
+Special    Identifier
+Meaning
+(Grammar)  (Variable /
+            Function /
+            Class)
+
+        │
+
+        ▼
+
+Continue Executing Program
+```
+
+Let's understand what happens internally.
+
+The interpreter first reads
+
+```python
+age
+```
+
+It checks the Reserved Keyword List.
+
+```
+age
+
+↓
+
+Found in Keyword List?
+
+↓
+
+No
+
+↓
+
+Treat as Variable (Identifier)
+```
+
+Next,
+
+it reads
+
+```python
+=
+```
+
+It recognizes it as the Assignment Operator.
+
+Then,
+
+it reads
+
+```python
+20
+```
+
+Python recognizes it as an Integer (`int`).
+
+Now,
+
+the interpreter reaches
+
+```python
+if
+```
+
+Again,
+
+it checks the Reserved Keyword List.
+
+```
+if
+
+↓
+
+Found in Keyword List?
+
+↓
+
+Yes
+
+↓
+
+Start Conditional Statement
+```
+
+Now Python understands,
+
+> **"The following code belongs to a conditional statement."**
+
+The interpreter continues reading the remaining code and executes it accordingly.
+
+---
+
+# 💾 Why Don't Keywords Occupy Memory Like Variables?
+
+Many beginners think that Keywords are also stored in memory like variables.
+
+Actually,
+
+they are **not**.
+
+Let's understand why.
+
+When we create a variable,
+
+```python
+name = "Nagabasha"
+```
+
+Python creates a new object in memory to store its value.
+
+```
+Computer RAM
+
++-----------------------------+
+| Variable | Value            |
++-----------------------------+
+| name     | "Nagabasha"      |
++-----------------------------+
+```
+
+The variable occupies memory because **its value is created while the program is running**.
+
+Now consider a keyword.
+
+```python
+if
+```
+
+The keyword **does not store any value**.
+
+It is simply a predefined instruction that already exists inside the Python Interpreter.
+
+Python does **not** create a new object for it every time your program runs.
+
+Instead,
+
+the interpreter simply recognizes it and immediately understands its meaning.
+
+Simply,
+
+```
+Variables
+
+↓
+
+Created During Program Execution
+
+↓
+
+Store Values
+
+↓
+
+Occupy Memory
+
+
+
+Keywords
+
+↓
+
+Already Built into the Python Interpreter
+
+↓
+
+Store No Values
+
+↓
+
+Do Not Occupy Memory Like Variables
+```
+
+That's why Keywords are **not stored in RAM like variables or objects**.
+
+They already exist as part of the Python language itself.
+
+---
+
+# 📌 Remember
+
+```
+Python Program
+
+        │
+
+        ▼
+
+Interpreter Reads Code
+
+        │
+
+        ▼
+
+Checks Reserved Keyword List
+
+        │
+
+ ┌──────┴────────┐
+ │               │
+
+ ▼               ▼
+
+Keyword?      Identifier?
+
+ │               │
+
+ ▼               ▼
+
+Special      Variable /
+Meaning      Function /
+              Class
+
+        │
+
+        ▼
+
+Continue Execution
+```
+
+**Always remember:**
+
+- Keywords are **predefined words** built into the Python Interpreter.
+- They define the **grammar** of the Python language.
+- Variables, functions, and classes are created **by programmers**.
+- Variables occupy memory because they store values.
+- Keywords do **not** occupy memory like variables because they already exist inside the Interpreter and only act as language instructions.
+
+---
+# 🚫 Why Can't We Rename, Change, or Create Keywords?
+
+Now you might have another question.
+
+> **"If Keywords are just words, why can't we rename or change them?"**
+
+The answer is simple.
+
+Python's Interpreter already knows the meaning of every keyword.
+
+For example,
+
+```python
+if age >= 18:
+```
+
+When the interpreter reads the word
+
+```python
+if
+```
+
+it immediately understands,
+
+> **"A conditional statement starts here."**
+
+Now imagine if Python allowed us to rename it.
+
+For example,
+
+```python
+banana age >= 18:
+```
+
+How would the interpreter know that **banana** means a conditional statement?
+
+It simply cannot.
+
+The interpreter only understands the predefined keywords that are built into the language.
+
+Similarly,
+
+suppose every programmer started creating their own keywords.
+
+Person A writes
+
+```python
+banana age >= 18:
+```
+
+Person B writes
+
+```python
+check age >= 18:
+```
+
+Person C writes
+
+```python
+condition age >= 18:
+```
+
+Now every Python program would look completely different.
+
+The interpreter would never know what each word actually means.
+
+That's why Python reserves these words and gives them a fixed meaning.
+
+Simply,
+
+> **Keywords cannot be renamed, changed, or recreated because the Python Interpreter depends on them to understand the structure of your program.**
+
+---
+
+# 🆚 Keywords vs Identifiers
+
+Many beginners confuse **Keywords** and **Identifiers**.
+
+Although both are words used in Python programs,
+
+they are completely different.
+
+## What is an Identifier?
+
+An **Identifier** is a name given by the programmer to identify things like:
+
+- Variables
+- Functions
+- Classes
+- Modules
+- Objects
+
+Example
+
+```python
+student_name = "Nagabasha"
+
+age = 21
+
+calculate_marks()
+
+class Student:
+    pass
+```
+
+Here,
+
+```
+student_name
+
+age
+
+calculate_marks
+
+Student
+```
+
+are all **Identifiers** because they are created by the programmer.
+
+---
+
+## Comparison
+
+| Keywords | Identifiers |
+|-----------|-------------|
+| Reserved by Python | Created by the Programmer |
+| Have predefined meaning | Can have any meaningful name |
+| Cannot be used as variable names | Used to name variables, functions, classes, etc. |
+| Fixed and cannot be changed | Can be changed or renamed |
+| Define Python's grammar | Identify user-created objects |
+
+---
+
+### Example
+
+✅ Valid Identifier
+
+```python
+student_age = 20
+```
+
+❌ Invalid Identifier
+
+```python
+if = 20
+```
+
+Output
+
+```text
+SyntaxError
+```
+
+because
+
+```
+if
+
+↓
+
+Keyword
+
+↓
+
+Already Reserved
+```
+
+---
+
+# 🆚 Keywords vs Built-in Functions
+
+Another common confusion is,
+
+> **"Is `print` also a Keyword?"**
+
+The answer is
+
+**No.**
+
+`print()` is a **Built-in Function**, not a Keyword.
+
+Python already provides many useful functions.
+
+Some examples are
+
+```python
+print()
+
+input()
+
+len()
+
+type()
+
+range()
+
+sum()
+
+max()
+
+min()
+```
+
+These are called **Built-in Functions**.
+
+Unlike Keywords,
+
+they perform a specific task and return a result.
+
+---
+
+## Difference Between Keywords and Built-in Functions
+
+| Keywords | Built-in Functions |
+|-----------|--------------------|
+| Define Python's grammar | Perform specific tasks |
+| Reserved by Python | Predefined functions provided by Python |
+| Cannot be renamed or used as variable names | Technically can be reassigned, but it is not recommended |
+| Examples: `if`, `for`, `while`, `class` | Examples: `print()`, `len()`, `input()`, `type()` |
+
+---
+
+### Example
+
+Keywords
+
+```python
+if age > 18:
+    print("Eligible")
+```
+
+Here,
+
+```
+if
+
+↓
+
+Keyword
+```
+
+and
+
+```
+print()
+
+↓
+
+Built-in Function
+```
+
+Both work together,
+
+but they are completely different.
+
+---
+
+### Can We Use a Built-in Function Name as a Variable?
+
+Technically,
+
+Yes.
+
+For example,
+
+```python
+print = 100
+
+print(print)
+```
+
+This generates an error because the original `print()` function has now been replaced by an integer.
+
+Although Python allows this,
+
+it is considered a **bad programming practice**.
+
+You should **never** use the names of built-in functions as variables.
+
+---
+
+# 📌 Remember
+
+```
+Keywords
+
+↓
+
+Reserved by Python
+
+↓
+
+Define Grammar
+
+↓
+
+Cannot Be Renamed
+
+
+
+Identifiers
+
+↓
+
+Created by Programmers
+
+↓
+
+Used to Name Variables,
+Functions,
+Classes, etc.
+
+
+
+Built-in Functions
+
+↓
+
+Provided by Python
+
+↓
+
+Perform Useful Tasks
+
+↓
+
+Should Not Be Used
+as Variable Names
+```
+
+---
+# 🌳 Classification of Python Keywords
+
+Python provides different keywords, and each keyword has a specific purpose.
+
+Instead of memorizing all keywords together, we can classify them into different categories based on what they do.
+
+```
+Python Keywords
+
+│
+
+├── Conditional Keywords
+
+├── Loop Keywords
+
+├── Function Keywords
+
+├── Class & Object Keywords
+
+├── Exception Handling Keywords
+
+├── Import Keywords
+
+├── Boolean & Special Value Keywords
+
+├── Variable Scope Keywords
+
+├── Logical Operator Keywords
+
+├── Asynchronous Programming Keywords
+
+└── Miscellaneous Keywords
+```
+
+Let's understand each category one by one.
+
+---
+
+# 1️⃣ Conditional Keywords
+
+These keywords are used to make decisions in a program.
+
+| Keyword | Purpose |
+|----------|---------|
+| `if` | Executes code if a condition is True |
+| `elif` | Checks another condition if the previous one is False |
+| `else` | Executes when all previous conditions are False |
+
+Example
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible")
+else:
+    print("Not Eligible")
+```
+
+---
+
+# 2️⃣ Loop Keywords
+
+These keywords are used to repeat a block of code.
+
+| Keyword | Purpose |
+|----------|---------|
+| `for` | Iterates over a sequence |
+| `while` | Repeats while a condition is True |
+| `break` | Terminates the loop immediately |
+| `continue` | Skips the current iteration and moves to the next |
+
+Example
+
+```python
+for i in range(5):
+    print(i)
+```
+
+---
+
+# 3️⃣ Function Keywords
+
+These keywords are related to functions.
+
+| Keyword | Purpose |
+|----------|---------|
+| `def` | Defines a function |
+| `return` | Returns a value from a function |
+| `yield` | Returns values one at a time from a generator |
+| `lambda` | Creates an anonymous function |
+
+Example
+
+```python
+def greet():
+    return "Hello"
+```
+
+---
+
+# 4️⃣ Class & Object Keywords
+
+These keywords are mainly used in Object-Oriented Programming (OOP).
+
+| Keyword | Purpose |
+|----------|---------|
+| `class` | Defines a class |
+| `self`* | Refers to the current object (*not a keyword*) |
+| `del` | Deletes an object or reference |
+
+> **💡 Note**
+>
+> `self` is **not** a Python Keyword.
+> It is simply a naming convention used in Python classes.
+> We'll learn more about it in the **Object-Oriented Programming** module.
+
+---
+
+# 5️⃣ Exception Handling Keywords
+
+These keywords help us handle errors without stopping the program.
+
+| Keyword | Purpose |
+|----------|---------|
+| `try` | Starts a block that may generate an error |
+| `except` | Handles the error |
+| `finally` | Always executes, whether an error occurs or not |
+| `raise` | Generates an exception manually |
+| `assert` | Checks whether a condition is True |
+
+Example
+
+```python
+try:
+    print(10 / 0)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+```
+
+---
+
+# 6️⃣ Import Keywords
+
+These keywords are used to import modules and packages.
+
+| Keyword | Purpose |
+|----------|---------|
+| `import` | Imports an entire module |
+| `from` | Imports specific objects from a module |
+| `as` | Creates an alias (shortcut name) |
+
+Example
+
+```python
+from math import sqrt
+
+import numpy as np
+```
+
+---
+
+# 7️⃣ Boolean & Special Value Keywords
+
+These keywords represent predefined values in Python.
+
+| Keyword | Purpose |
+|----------|---------|
+| `True` | Boolean True |
+| `False` | Boolean False |
+| `None` | Represents the absence of a value |
+
+Example
+
+```python
+isStudent = True
+
+result = None
+```
+
+---
+
+# 8️⃣ Variable Scope Keywords
+
+These keywords control the scope of variables.
+
+| Keyword | Purpose |
+|----------|---------|
+| `global` | Refers to a global variable |
+| `nonlocal` | Refers to a variable in the nearest enclosing function |
+
+We'll study these in detail in the **Variable Scope** module.
+
+---
+
+# 9️⃣ Logical Operator Keywords
+
+These keywords combine or modify conditions.
+
+| Keyword | Purpose |
+|----------|---------|
+| `and` | Returns True if both conditions are True |
+| `or` | Returns True if at least one condition is True |
+| `not` | Reverses the Boolean result |
+
+Example
+
+```python
+age = 20
+
+print(age > 18 and age < 30)
+```
+
+---
+
+# 🔟 Asynchronous Programming Keywords
+
+These keywords are used to write asynchronous (non-blocking) programs.
+
+| Keyword | Purpose |
+|----------|---------|
+| `async` | Defines an asynchronous function |
+| `await` | Waits for an asynchronous task to complete |
+
+These are advanced topics, and we'll learn them later.
+
+---
+
+# 1️⃣1️⃣ Miscellaneous Keywords
+
+Some keywords don't fit into the previous categories but are still important.
+
+| Keyword | Purpose |
+|----------|---------|
+| `pass` | Does nothing (placeholder) |
+| `with` | Simplifies resource management |
+| `is` | Checks object identity |
+| `in` | Checks membership inside a collection |
+
+We'll study these keywords in detail when learning their respective topics.
+
+---
+
+# 📌 Remember
+
+```
+Python Keywords
+
+↓
+
+Grouped by Purpose
+
+↓
+
+Conditional
+
+↓
+
+Loops
+
+↓
+
+Functions
+
+↓
+
+Classes
+
+↓
+
+Exceptions
+
+↓
+
+Imports
+
+↓
+
+Boolean Values
+
+↓
+
+Variable Scope
+
+↓
+
+Logical Operators
+
+↓
+
+Async Programming
+
+↓
+
+Miscellaneous
+```
+
+---
+# ⚠️ What Happens If Keywords Didn't Exist?
+
+Now let's imagine a world where Python had **no Keywords**.
+
+What would happen?
+
+Almost every programming feature would stop working because the Interpreter would no longer understand the structure of our code.
+
+The table below shows what would happen.
+
+| Without Keywords | Result |
+|------------------|--------|
+| No `if`, `elif`, `else` | No conditional statements |
+| No `for`, `while` | No loops |
+| No `def` | No user-defined functions |
+| No `class` | No Object-Oriented Programming |
+| No `import` | Cannot import modules or libraries |
+| No `return` | Functions cannot return values |
+| No `True`, `False`, `None` | No Boolean logic or special values |
+| No `try`, `except` | Programs crash whenever an error occurs |
+
+Simply,
+
+> **Keywords are the grammar of Python. Without them, Python would become just a collection of words and symbols with no meaning.**
+
+Think about English.
+
+Imagine speaking without words like:
+
+- is
+- are
+- if
+- because
+- while
+
+You would still have words,
+
+but you couldn't form meaningful sentences.
+
+Python works in exactly the same way.
+
+Keywords are the **grammar rules** that hold the entire language together.
+
+---
+
+# 🔢 How Many Keywords Are There?
+
+One common question beginners ask is,
+
+> **"How many Keywords are there in Python?"**
+
+The answer is,
+
+**The number is not fixed forever.**
+
+As Python evolves,
+
+new features may introduce new keywords,
+
+or existing keywords may change.
+
+Because of this,
+
+it's **not recommended to memorize the total number of keywords.**
+
+Instead,
+
+learn **what each keyword does**, and use Python itself whenever you want to check the complete list.
+
+---
+
+## Python Version Comparison
+
+The number of keywords has changed over different Python versions.
+
+| Python Version | Number of Keywords |
+|----------------|-------------------:|
+| Python 3.6 | 33 |
+| Python 3.7+ | 35+ (may change in future versions) |
+
+For example,
+
+Python 3.7 introduced
+
+```python
+async
+await
+```
+
+as permanent reserved keywords.
+
+Similarly,
+
+future Python versions may introduce additional keywords.
+
+That's why it is always better to check the keywords available in your installed Python version instead of remembering a fixed number.
+
+---
+
+# 💻 How to View All Keywords in Python
+
+Python provides a built-in module named **`keyword`**.
+
+This module contains all the reserved keywords available in your installed Python version.
+
+First,
+
+import the module.
+
+```python
+import keyword
+```
+
+Now,
+
+to display the complete list of keywords,
+
+```python
+import keyword
+
+print(keyword.kwlist)
+```
+
+Output
+
+```text
+['False', 'None', 'True', 'and', 'as', 'assert', ...]
+```
+
+---
+
+## How to Find the Total Number of Keywords
+
+We can use the `len()` function together with `keyword.kwlist`.
+
+```python
+import keyword
+
+print(len(keyword.kwlist))
+```
+
+Output
+
+```text
+35
+```
+
+> **💡 Note**
+>
+> Your output may be different depending on the Python version installed on your computer.
+
+---
+
+# 🔍 How to Check Whether a Word Is a Keyword
+
+Sometimes,
+
+we may want to know whether a particular word is a Python Keyword or not.
+
+For this,
+
+Python provides the
+
+```python
+keyword.iskeyword()
+```
+
+function.
+
+### Syntax
+
+```python
+keyword.iskeyword("word")
+```
+
+---
+
+### Example
+
+```python
+import keyword
+
+print(keyword.iskeyword("if"))
+
+print(keyword.iskeyword("hello"))
+
+print(keyword.iskeyword("True"))
+
+print(keyword.iskeyword("print"))
+```
+
+Output
+
+```text
+True
+
+False
+
+True
+
+False
+```
+
+Notice carefully,
+
+```python
+print
+```
+
+returns
+
+```text
+False
+```
+
+because **`print()` is a Built-in Function**, not a Python Keyword.
+
+---
+
+# 🎯 What You've Learned
+
+After completing this module, you should now be able to:
+
+- ✅ Explain what Python Keywords are.
+- ✅ Understand why they are called Reserved Keywords.
+- ✅ Explain why Python needs Keywords.
+- ✅ Understand how the Python Interpreter recognizes Keywords.
+- ✅ Explain why Keywords do not occupy memory like variables.
+- ✅ Differentiate between Keywords, Identifiers, and Built-in Functions.
+- ✅ Classify Python Keywords based on their purpose.
+- ✅ Explain what would happen if Keywords didn't exist.
+- ✅ Display all Keywords using the `keyword` module.
+- ✅ Check whether a word is a Keyword using `keyword.iskeyword()`.
+
+---
+
+# ⚡ Quick Revision
+
+| Concept | One-Line Explanation |
+|----------|----------------------|
+| **Keyword** | A reserved word with a predefined meaning in Python. |
+| **Reserved Keyword** | A word already reserved by Python and cannot be used as an identifier. |
+| **Identifier** | A user-defined name for variables, functions, classes, etc. |
+| **Built-in Function** | A predefined function provided by Python to perform a specific task. |
+| **Keyword Module** | A built-in module used to access Python Keywords. |
+| **`keyword.kwlist`** | Returns the list of all Python Keywords. |
+| **`len(keyword.kwlist)`** | Returns the total number of Keywords. |
+| **`keyword.iskeyword()`** | Checks whether a word is a Python Keyword. |
+
+---
+
+# 💻 Practice Programs
+
+To understand **Python Keywords** from **Beginner → Advanced** with detailed explanations and well-commented programs, visit:
+
+🔗 **Nagabasha's GitHub Repository**
+
+https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/keywords_BasicToAdvanced.py
+
+---
+</details>
