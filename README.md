@@ -854,3 +854,939 @@ https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/print_Fu
 ---
 
 </details>
+
+<details>
+<summary>
+
+## 📖 Module 03 • Variables
+
+Learn what variables are, why they are important, how they work, and why almost every program depends on them.
+
+</summary>
+
+---
+
+# ❓ What is a Variable?
+
+A **variable** is a **named memory location** that stores a value, which can be changed later during the execution of a program.
+
+Think of a variable as a **container** that stores data so that we can use or modify it whenever needed.
+
+---
+
+# 🌍 Real-World Analogy
+
+Imagine your kitchen.
+
+You store different items in different containers.
+
+For example:
+
+| Container | Stores |
+|-----------|--------|
+| Sugar Container | Sugar |
+| Salt Container | Salt |
+| Rice Container | Rice |
+| Tea Container | Tea Powder |
+
+Each container has a **name** and stores a **specific item**.
+
+Variables work in exactly the same way.
+
+| Variable | Stores |
+|----------|---------|
+| `name` | "Nagabasha" |
+| `age` | `21` |
+| `salary` | `50000` |
+| `isStudent` | `True` |
+
+Just like different containers store different kitchen items, variables store different kinds of values such as numbers, text, or Boolean values.
+
+---
+
+# 📝 Syntax
+
+The basic syntax for creating a variable is:
+
+```python
+variable_name = value
+```
+
+### Example
+
+```python
+name = "Nagabasha"
+
+age = 21
+
+salary = 50000
+
+isStudent = True
+```
+
+Here,
+
+- `name`
+- `age`
+- `salary`
+- `isStudent`
+
+are variable names, and the values on the right side are stored inside those variables.
+
+---
+
+# 🤔 Why Do We Use Variables?
+
+Variables make programming much easier.
+
+They help us:
+
+## 1️⃣ Store Data
+
+Variables act like named containers that store information such as numbers, text, decimal values, or Boolean values.
+
+Example:
+
+```python
+age = 21
+```
+
+---
+
+## 2️⃣ Reuse Values
+
+Instead of writing the same value again and again, we store it once inside a variable and reuse it whenever needed.
+
+---
+
+## 3️⃣ Easy to Update
+
+If a value changes, we only need to update it in one place.
+
+Example:
+
+```python
+salary = 25000
+
+salary = 30000
+```
+
+Instead of changing the value everywhere, we simply update the variable.
+
+---
+
+## 4️⃣ Better Readability
+
+Meaningful variable names make code easier to understand.
+
+Example:
+
+```python
+user_age = 20
+```
+
+is much easier to understand than
+
+```python
+x = 20
+```
+
+---
+
+## 5️⃣ Track Changing Data
+
+Variables can store values that change over time.
+
+Examples:
+
+- Game score
+- Bank balance
+- Student attendance
+- Number of website visitors
+- Shopping cart total
+
+---
+
+# 🎓 Real-World Example
+
+Imagine a faculty member taking attendance every day in your college.
+
+At the end of the month, they need to calculate each student's attendance.
+
+## ❌ Without Variables
+
+Suppose Ajay's attendance is calculated like this:
+
+```python
+print(1+1+0+1+1+0+1+1+1+0+1+1...)
+```
+
+For Vijay:
+
+```python
+print(1+1+1+0+0+1+1+1+0+1+0...)
+```
+
+Now imagine doing this for **60 students**.
+
+It becomes:
+
+- Difficult to read
+- Difficult to update
+- Difficult to reuse
+- Almost impossible to manage
+
+---
+
+## ✅ With Variables
+
+Instead, we can store each student's attendance in a variable.
+
+```python
+Ajay = 0
+
+Vijay = 0
+```
+
+Every day, if a student is present:
+
+```python
+Ajay += 1
+
+Vijay += 1
+```
+
+At the end of the month:
+
+```python
+print(Ajay)
+
+print(Vijay)
+```
+
+The same variables can later be used to:
+
+- Calculate semester attendance
+- Display attendance instantly
+- Calculate class average attendance
+- Generate attendance reports
+- Check eligibility for examinations
+
+Instead of calculating everything again, we simply reuse the stored values.
+
+This is one of the biggest advantages of variables.
+
+---
+
+# ⚠️ What Happens If Variables Didn't Exist?
+
+Imagine programming without variables.
+
+It would become extremely difficult.
+
+## 1️⃣ No Data Storage
+
+Without variables, there would be no way to store information.
+
+---
+
+## 2️⃣ No Reusability
+
+Every value would have to be typed again and again.
+
+---
+
+## 3️⃣ Poor Readability
+
+Programs would become messy and difficult to understand because there would be no meaningful names for data.
+
+---
+
+## 4️⃣ No User Input Handling
+
+Programs couldn't store what the user enters because there would be no variable to hold that value.
+
+---
+
+## 5️⃣ No Real-World Applications
+
+Modern applications such as:
+
+- Banking Systems
+- Social Media Apps
+- Games
+- Artificial Intelligence
+- Websites
+- Mobile Apps
+
+all depend on variables.
+
+Without variables, building real-world software would become extremely difficult.
+
+---
+# 📏 Rules for Defining Variables
+
+Python has some rules for creating variable names.
+
+These rules help the Python interpreter identify that a name is a **valid variable** and execute the program without errors.
+
+Let's understand each rule one by one.
+
+---
+
+## Rule 1: Variable Must Start with a Letter or Underscore (_)
+
+A variable name **must begin** with:
+
+- An alphabet (`A-Z` or `a-z`)
+- An underscore (`_`)
+
+It **cannot** start with:
+
+- A number
+- A special character
+
+### ✅ Valid Examples
+
+```python
+myName = "Nagabasha"
+
+_myAge = 20
+
+rpmOf10vFanIs = 88
+```
+
+### ❌ Invalid Examples
+
+```python
+4ApplesCost = 100
+```
+
+Reason:
+
+> Variable names cannot start with a number.
+
+```python
+$appleCost = 100
+```
+
+Reason:
+
+> Variable names cannot start with special characters.
+
+---
+
+## Rule 2: Variables Can Only Contain Letters, Numbers and Underscores
+
+After the first character, a variable may contain:
+
+- Letters
+- Numbers
+- Underscores (`_`)
+
+It **cannot** contain:
+
+- Spaces
+- Hyphens (`-`)
+- Special characters (`@`, `$`, `%`, `#`, etc.)
+
+### ✅ Valid Examples
+
+```python
+device_Name = "Acer"
+
+model_10_cost = 70000
+
+android16Version = "Not Available"
+```
+
+### ❌ Invalid Examples
+
+```python
+device name = "Acer"
+```
+
+Reason:
+
+> Variable names cannot contain spaces.
+
+```python
+model-10-cost = 70000
+```
+
+Reason:
+
+> Hyphen (`-`) is treated as the subtraction operator.
+
+```python
+android@version16 = "Not Available"
+```
+
+Reason:
+
+> Special characters are not allowed.
+
+---
+
+## Rule 3: Variable Names Are Case-Sensitive
+
+Python treats uppercase and lowercase letters as different.
+
+Example:
+
+```python
+myName = "Nagabasha"
+
+MyName = "Basha"
+```
+
+These are **two different variables**.
+
+Even a single uppercase or lowercase letter creates a completely new variable.
+
+---
+
+## Rule 4: Variable Names Cannot Be Python Keywords
+
+Python contains some **reserved words**, also called **keywords**.
+
+These words already have a special meaning inside Python.
+
+Therefore, they **cannot** be used as variable names.
+
+### ❌ Invalid Examples
+
+```python
+True = 1
+
+False = 0
+
+None = 0
+
+if = "condition"
+
+while = True
+```
+
+All of the above statements generate an error because these names are reserved by Python.
+
+---
+
+# ✅ Best Practices for Naming Variables
+
+Although Python allows many different variable names, following good naming practices makes your code cleaner and easier to understand.
+
+---
+
+## 1. Use snake_case
+
+Separate words using underscores.
+
+### ✅ Good
+
+```python
+employee_salary
+
+student_name
+
+mobile_number
+```
+
+---
+
+## 2. Use Meaningful Names
+
+Choose names that clearly describe the purpose of the variable.
+
+### ✅ Good
+
+```python
+student_marks
+
+daily_total
+
+bank_balance
+```
+
+### ❌ Bad
+
+```python
+x
+
+a
+
+temp
+```
+
+Meaningful names make your programs easier to read and maintain.
+
+---
+
+## 3. Avoid Confusing Variable Names
+
+Avoid using single-letter variable names such as:
+
+```python
+l
+
+O
+
+I
+```
+
+These can easily be confused with:
+
+```
+1
+
+0
+```
+
+Always choose clear and descriptive names.
+
+---
+
+# 🔄 What is Dynamic Typing?
+
+One of Python's most powerful features is **Dynamic Typing**.
+
+Dynamic typing means:
+
+> You do **not** need to specify the data type of a variable before using it.
+
+Python automatically identifies the variable's data type based on the value assigned to it.
+
+For example,
+
+```python
+x = 10
+```
+
+Python automatically understands that `x` is an **integer**.
+
+Later,
+
+```python
+x = "Hello"
+```
+
+Python automatically changes `x` into a **string**.
+
+Again,
+
+```python
+x = 3.14
+```
+
+Now Python treats `x` as a **float**.
+
+The programmer never needs to explicitly mention the data type.
+
+---
+
+## Comparison with Java
+
+In Java,
+
+the data type must be declared first.
+
+```java
+int x = 10;
+
+x = "Hello";
+```
+
+This generates an error because the variable type cannot change.
+
+---
+
+In Python,
+
+```python
+x = 10
+
+x = "Hello"
+
+x = 3.14
+```
+
+All the above statements work perfectly.
+
+Python automatically changes the variable type whenever a new value is assigned.
+
+This is why Python is called a **Dynamically Typed Language**.
+
+---
+
+# 📢 Declaration vs Initialization
+
+These two terms often confuse beginners.
+
+Let's understand them one by one.
+
+---
+
+## What is Declaration?
+
+Declaration means
+
+> Creating a variable by giving it a name.
+
+---
+
+## What is Initialization?
+
+Initialization means
+
+> Assigning a value to a variable for the very first time.
+
+---
+
+## In Languages Like C or Java
+
+Declaration and Initialization can happen separately.
+
+Example:
+
+```java
+int age;
+```
+
+This only declares the variable.
+
+Later,
+
+```java
+age = 25;
+```
+
+This initializes the variable.
+
+---
+
+## In Python
+
+Python does **not** have a separate declaration step.
+
+Writing only
+
+```python
+age
+```
+
+is **not valid**.
+
+A variable is created only when a value is assigned.
+
+Example:
+
+```python
+age = 25
+```
+
+This single statement performs both:
+
+- Variable Declaration
+- Variable Initialization
+
+at the same time.
+
+---
+
+### 📌 Remember
+
+Unlike C or Java,
+
+Python creates and initializes a variable in **one single statement**.
+
+There is no separate declaration step in Python.
+
+---
+
+## 💻 Practice Programs
+
+To understand variables from beginner to advanced level with detailed explanations and commented programs, visit:
+
+🔗 **Nagabasha's GitHub Repository**
+
+https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/variables_BasicToAdvanced.py
+
+---
+# 🗑️ How to Delete a Variable?
+
+Sometimes, after using a variable, we may no longer need it.
+
+In such cases, Python provides the **`del` keyword** to delete a variable.
+
+### Syntax
+
+```python
+del variable_name
+```
+
+### Example
+
+```python
+age = 20
+
+print(age)
+
+del age
+
+print(age)
+```
+
+### Output
+
+```text
+20
+
+NameError: name 'age' is not defined
+```
+
+The first `print()` statement works because the variable exists.
+
+The second `print()` statement generates an error because the variable has already been deleted.
+
+---
+
+# 🤔 What Does Deleting a Variable Mean?
+
+Many beginners think that deleting a variable means deleting the value itself.
+
+Actually, that's **not completely true**.
+
+When you delete a variable, Python removes the **variable name (reference)**.
+
+After that, the program can no longer access the value using that variable name.
+
+---
+
+## Before Deleting
+
+Suppose we write
+
+```python
+age = 20
+```
+
+Python stores it like this.
+
+```
+Python Program
+
+age = 20
+
+        │
+
+        ▼
+
+Computer RAM
+
++----------------------+
+| Variable | Value     |
++----------------------+
+| age      | 20        |
++----------------------+
+```
+
+Now,
+
+```python
+print(age)
+```
+
+Python searches for
+
+```
+age
+```
+
+finds
+
+```
+20
+```
+
+and displays
+
+```
+20
+```
+
+---
+
+## After Deleting
+
+Suppose we write
+
+```python
+del age
+```
+
+Now Python removes the variable name.
+
+```
+Computer RAM
+
++----------------------+
+| Variable | Value     |
++----------------------+
+
+age ❌ Deleted
+```
+
+Now,
+
+```python
+print(age)
+```
+
+Python searches for
+
+```
+age
+```
+
+but cannot find it.
+
+So it raises
+
+```text
+NameError
+```
+
+because the variable no longer exists.
+
+---
+
+# 🧠 What Actually Happens Internally?
+
+Let's understand what happens step by step.
+
+Suppose we write
+
+```python
+age = 20
+```
+
+The Python Interpreter performs the following steps.
+
+```
+Step 1
+
+Read the statement
+
+↓
+
+Step 2
+
+Create a variable called
+
+age
+
+↓
+
+Step 3
+
+Store
+
+20
+
+inside memory
+
+↓
+
+Step 4
+
+Program can now access it.
+```
+
+Now we execute
+
+```python
+del age
+```
+
+The interpreter performs
+
+```
+Read del age
+
+↓
+
+Find variable age
+
+↓
+
+Remove the variable name
+
+↓
+
+Program can no longer access it
+```
+
+---
+
+# 💡 Does Python Immediately Delete the Value From Memory?
+
+Not always.
+
+When we execute
+
+```python
+del age
+```
+
+Python removes the **variable name**.
+
+If no other variable is using that value,
+
+Python's **Garbage Collector** automatically frees the unused memory later.
+
+You don't have to manually free memory like in languages such as C or C++.
+
+Python handles memory management automatically.
+
+---
+
+# 🧹 What is Garbage Collection?
+
+Imagine you throw an empty water bottle into a dustbin.
+
+Later,
+
+a garbage truck comes and removes all the waste.
+
+Similarly,
+
+after a variable is no longer used,
+
+Python's **Garbage Collector** automatically removes unused objects from memory.
+
+You don't have to worry about cleaning memory yourself.
+
+---
+
+# 📌 Remember
+
+Deleting a variable does **not** mean deleting Python itself.
+
+It simply means:
+
+- Remove the variable name.
+- The program can no longer use that variable.
+- If the stored value is no longer needed anywhere else, Python automatically frees the memory.
+
+---
+
+# 💻 Practice More
+
+Click the link below to learn Variables from **Beginner → Advanced** with plenty of examples and detailed comments.
+
+🔗 **Nagabasha's GitHub Repository**
+
+https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/variables_BasicToAdvanced.py
+
+---
+</details>
