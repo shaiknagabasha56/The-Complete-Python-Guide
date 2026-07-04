@@ -1503,15 +1503,6 @@ There is no separate declaration step in Python.
 
 ---
 
-## 💻 Practice Programs
-
-To understand variables from beginner to advanced level with detailed explanations and commented programs, visit:
-
-🔗 **Nagabasha's GitHub Repository**
-
-https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/variables_BasicToAdvanced.py
-
----
 # 🗑️ How to Delete a Variable?
 
 Sometimes, after using a variable, we may no longer need it.
@@ -1749,37 +1740,6 @@ You don't have to manually free memory like in languages such as C or C++.
 Python handles memory management automatically.
 
 ---
-
-# 🧹 What is Garbage Collection?
-
-Imagine you throw an empty water bottle into a dustbin.
-
-Later,
-
-a garbage truck comes and removes all the waste.
-
-Similarly,
-
-after a variable is no longer used,
-
-Python's **Garbage Collector** automatically removes unused objects from memory.
-
-You don't have to worry about cleaning memory yourself.
-
----
-
-# 📌 Remember
-
-Deleting a variable does **not** mean deleting Python itself.
-
-It simply means:
-
-- Remove the variable name.
-- The program can no longer use that variable.
-- If the stored value is no longer needed anywhere else, Python automatically frees the memory.
-
----
-
 # 💻 Practice More
 
 Click the link below to learn Variables from **Beginner → Advanced** with plenty of examples and detailed comments.
