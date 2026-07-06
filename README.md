@@ -7567,7 +7567,7 @@ https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/typeConv
 
 <details>
 <summary>
-📖 Module 08 • Conditional Statements
+<b>📖 Module 08 • Conditional Statements</b>
 </summary>
 
 ---
