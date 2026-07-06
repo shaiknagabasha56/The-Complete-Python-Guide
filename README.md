@@ -5956,3 +5956,1635 @@ https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/keywords
 
 ---
 </details>
+
+
+
+
+
+
+<details>
+<summary>
+
+## 📖 Module 07 • Type Conversion & Type Casting
+
+Learn how Python converts one data type into another, why type conversion is important, the difference between implicit and explicit conversion, and how Python handles different data types internally.
+
+</summary>
+
+---
+
+# ❓ What is Type Conversion?
+
+In the previous modules, we learned about **Data Types**.
+
+We know that every value in Python belongs to a particular data type such as `int`, `float`, `str`, `bool`, `list`, etc.
+
+Sometimes, while writing programs, we need to change a value from one data type to another.
+
+This process is called **Type Conversion**.
+
+> **Type Conversion is the process of changing a value from one data type to another.**
+
+For example,
+
+- Integer (`int`) → Float (`float`)
+- String (`str`) → Integer (`int`)
+- List (`list`) → Tuple (`tuple`)
+- Float (`float`) → Integer (`int`)
+
+Python allows us to perform these conversions whenever they are valid.
+
+---
+
+# 🤔 Why Do We Need Type Conversion?
+
+Different data types behave differently.
+
+Sometimes, two data types cannot work together directly.
+
+In such situations, we convert one data type into another so that Python can perform the required operation correctly.
+
+Some common reasons are:
+
+- Perform mathematical operations between different data types.
+- Convert numbers into strings for displaying output.
+- Process user input, since `input()` always returns a string.
+- Remove duplicate values by converting a list into a set.
+- Convert mutable collections into immutable ones (or vice versa).
+- Format data before storing it in files or databases.
+- Prepare clean data for Data Science and Machine Learning.
+- Prevent runtime errors caused by incompatible data types.
+
+Simply,
+
+> **Type Conversion allows different data types to work together safely and efficiently.**
+
+---
+
+# 🌍 Real-World Analogy
+
+Imagine two people who speak different languages.
+
+One person speaks **English**.
+
+The other person speaks **Telugu**.
+
+Since both speak different languages, they cannot understand each other directly.
+
+To communicate, they need a **Translator**.
+
+```
+English
+
+        │
+
+        ▼
+
+Translator
+
+        │
+
+        ▼
+
+Telugu
+```
+
+The translator converts one language into another so both people can communicate easily.
+
+Python works in exactly the same way.
+
+Sometimes,
+
+one value is an **Integer**,
+
+while another value is a **Float**,
+
+or one value is a **String**.
+
+Since different data types follow different rules, Python sometimes needs to convert one data type into another before performing an operation.
+
+```
+Integer
+
+        │
+
+        ▼
+
+Type Conversion
+
+        │
+
+        ▼
+
+Float
+```
+
+Just like a translator helps two people communicate,
+
+**Type Conversion helps different data types work together correctly.**
+
+---
+
+# 📌 Remember
+
+```
+Different Data Types
+
+        │
+
+        ▼
+
+Need to Work Together
+
+        │
+
+        ▼
+
+Type Conversion
+
+        │
+
+        ▼
+
+Compatible Data Types
+
+        │
+
+        ▼
+
+Correct Execution
+```
+
+---
+# 🧠 How Does Type Conversion Work Internally?
+
+Now you might have a question.
+
+> **"How does Python convert one data type into another?"**
+
+The answer is simple.
+
+Whenever Python performs an operation, the **Python Interpreter** first checks the data types of the values involved.
+
+If both values already have compatible data types,
+
+Python performs the operation directly.
+
+Otherwise,
+
+Python decides whether it can convert one data type into another.
+
+If the conversion is possible,
+
+Python converts the value and continues executing the program.
+
+If the conversion is not possible,
+
+Python generates an error.
+
+---
+
+## Internal Working
+
+Suppose we write the following program.
+
+```python
+x = 5
+y = 2.5
+
+z = x + y
+```
+
+When we execute this program,
+
+the Python Interpreter works internally like this.
+
+```
+You Write Code
+
+        │
+
+        ▼
+
+Python Interpreter
+
+        │
+
+        ▼
+
+Reads the Values
+
+        │
+
+        ▼
+
+Checks Their Data Types
+
+        │
+
+        ▼
+
+Compatible?
+
+   ┌────┴─────┐
+   │          │
+
+  YES        NO
+   │          │
+   ▼          ▼
+
+Perform     Can Python
+Operation   Convert?
+
+              │
+
+        ┌─────┴─────┐
+        │           │
+
+       YES         NO
+        │           │
+
+        ▼           ▼
+
+Convert       Generate Error
+
+        │
+
+        ▼
+
+Perform Operation
+
+        │
+
+        ▼
+
+Store Result in Memory
+```
+
+Let's understand the above example.
+
+The interpreter first reads
+
+```python
+x = 5
+```
+
+It identifies
+
+```
+5
+
+↓
+
+Integer (int)
+```
+
+Next,
+
+it reads
+
+```python
+y = 2.5
+```
+
+It identifies
+
+```
+2.5
+
+↓
+
+Float
+```
+
+Now,
+
+Python wants to execute
+
+```python
+x + y
+```
+
+Before performing addition,
+
+it checks the data types.
+
+```
+int
+
++
+
+float
+```
+
+Both data types are different.
+
+Python now checks whether these two data types can work together.
+
+Since they can,
+
+Python automatically converts
+
+```
+5
+
+↓
+
+5.0
+```
+
+Now the operation becomes
+
+```python
+5.0 + 2.5
+```
+
+The result is
+
+```python
+7.5
+```
+
+Finally,
+
+Python stores the result inside the variable
+
+```python
+z
+```
+
+---
+
+# 💾 Memory Representation
+
+Many beginners think that Type Conversion changes the original variable.
+
+Actually,
+
+it **does not**.
+
+Python creates a **new object** after conversion.
+
+Let's understand this with an example.
+
+```python
+x = "10"
+
+y = int(x)
+```
+
+Initially,
+
+memory looks like this.
+
+```
+Computer RAM
+
++----------------------+
+| Variable | Value     |
++----------------------+
+| x        | "10"      |
++----------------------+
+```
+
+Now,
+
+Python executes
+
+```python
+int(x)
+```
+
+Instead of changing the existing object,
+
+Python creates a **new Integer object**.
+
+```
+Computer RAM
+
++----------------------+
+| Variable | Value     |
++----------------------+
+| x        | "10"      |
+| y        | 10        |
++----------------------+
+```
+
+Notice carefully,
+
+the original variable
+
+```python
+x
+```
+
+still stores a String.
+
+Only
+
+```python
+y
+```
+
+stores the Integer.
+
+We can verify this.
+
+```python
+x = "10"
+
+y = int(x)
+
+print(x)
+print(type(x))
+
+print(y)
+print(type(y))
+```
+
+Output
+
+```text
+10
+<class 'str'>
+
+10
+<class 'int'>
+```
+
+This proves that
+
+> **Type Conversion does not modify the original object. It creates a new object of the required data type and stores it in memory.**
+
+---
+
+# 📌 Remember
+
+```
+Python Program
+
+        │
+
+        ▼
+
+Interpreter Reads Values
+
+        │
+
+        ▼
+
+Checks Data Types
+
+        │
+
+        ▼
+
+Compatible?
+
+        │
+
+ ┌──────┴──────┐
+ │             │
+
+ ▼             ▼
+
+Yes           No
+
+ │             │
+
+ ▼             ▼
+
+Perform     Convert Possible?
+
+Operation        │
+
+           ┌────┴────┐
+           │         │
+
+          Yes       No
+
+           │         │
+
+           ▼         ▼
+
+      Convert     Error
+
+           │
+
+           ▼
+
+    Create New Object
+
+           │
+
+           ▼
+
+      Store Result
+```
+
+### 💡 Always Remember
+
+- Python checks the data types **before** performing an operation.
+- If needed, Python converts the data type (automatically or manually).
+- Type Conversion **does not modify the original object**.
+- A **new object** is created after conversion.
+- If Python cannot perform the conversion, it raises an error.
+
+---
+# 🌳 Classification of Type Conversion
+
+Python provides two ways to convert one data type into another.
+
+```
+Type Conversion
+
+│
+
+├── Implicit Type Conversion
+│      (Automatic Conversion)
+
+└── Explicit Type Conversion
+       (Manual Conversion / Type Casting)
+```
+
+Let's understand both one by one.
+
+---
+
+# 🔄 1. Implicit Type Conversion
+
+## ❓ What is Implicit Type Conversion?
+
+**Implicit Type Conversion** is the automatic process in which the **Python Interpreter** converts one data type into another **without any instruction from the programmer**.
+
+Simply,
+
+> **Implicit Type Conversion is an automatic data type conversion performed by the Python Interpreter during program execution (runtime).**
+
+The programmer does **not** need to write any conversion functions like `int()` or `float()`.
+
+Python automatically performs the conversion whenever it is safe to do so.
+
+---
+
+## 🤔 Why Do We Need Implicit Type Conversion?
+
+Python automatically performs implicit conversion because it makes programming easier and safer.
+
+Some common reasons are:
+
+- It allows different numeric data types to work together.
+- It reduces the amount of code we write.
+- It prevents unnecessary conversion functions.
+- It helps avoid simple runtime errors.
+- It prevents data loss by promoting smaller data types to larger ones whenever possible.
+
+Simply,
+
+> **Implicit Type Conversion allows Python to automatically combine compatible data types while preserving data accuracy.**
+
+---
+
+# 🧠 How Does Implicit Type Conversion Work?
+
+Whenever Python encounters an operation involving two different data types,
+
+the Interpreter first checks whether they are compatible.
+
+If they are compatible,
+
+Python automatically converts the lower data type into a higher data type before performing the operation.
+
+For example,
+
+```python
+x = 5
+y = 2.5
+
+print(x + y)
+```
+
+Internally,
+
+Python performs the following steps.
+
+```
+x = 5
+
+↓
+
+Integer
+
+
+y = 2.5
+
+↓
+
+Float
+
+
+Different Data Types?
+
+↓
+
+Yes
+
+↓
+
+Convert Integer → Float
+
+↓
+
+5.0 + 2.5
+
+↓
+
+7.5
+```
+
+Output
+
+```text
+7.5
+```
+
+The programmer never wrote
+
+```python
+float(x)
+```
+
+Yet Python automatically converted the integer into a float.
+
+This is called **Implicit Type Conversion**.
+
+---
+
+# 📊 Type Promotion Hierarchy
+
+Python always converts the **lower data type** into a **higher data type**.
+
+This process is called **Type Promotion**.
+
+```
+Boolean
+
+↓
+
+Integer
+
+↓
+
+Float
+
+↓
+
+Complex
+```
+
+Python always moves **downward** in the above hierarchy.
+
+For example,
+
+```
+bool
+
+↓
+
+int
+
+
+int
+
+↓
+
+float
+
+
+float
+
+↓
+
+complex
+```
+
+Python **never** performs the opposite conversion automatically because doing so may lose information.
+
+For example,
+
+```
+Float
+
+↓
+
+Integer
+```
+
+would remove the decimal part.
+
+Similarly,
+
+```
+Complex
+
+↓
+
+Float
+```
+
+would lose the imaginary part.
+
+To avoid data loss,
+
+Python performs only **safe automatic conversions**.
+
+---
+
+# ✅ Possible Implicit Conversions
+
+Python automatically supports the following conversions.
+
+| Original Data Type | Automatically Converts To |
+|--------------------|--------------------------|
+| `bool` | `int`, `float`, `complex` |
+| `int` | `float`, `complex` |
+| `float` | `complex` |
+
+Python does **not** automatically perform reverse conversions.
+
+---
+
+## 💻 Example Program
+
+```python
+x = 10          # int
+
+y = 2.5         # float
+
+result = x + y
+
+print(result)
+
+print(type(result))
+```
+
+Output
+
+```text
+12.5
+
+<class 'float'>
+```
+
+Here,
+
+Python automatically converts
+
+```
+10
+
+↓
+
+10.0
+```
+
+before performing the addition.
+
+---
+
+# 📌 Remember
+
+```
+Different Numeric Data Types
+
+        │
+
+        ▼
+
+Python Interpreter
+
+        │
+
+        ▼
+
+Checks Compatibility
+
+        │
+
+        ▼
+
+Safe Conversion Possible?
+
+        │
+
+ ┌──────┴──────┐
+ │             │
+
+ ▼             ▼
+
+Yes            No
+
+ │             │
+
+ ▼             ▼
+
+Automatically   Generate
+Convert         Error
+
+ │
+
+ ▼
+
+Perform Operation
+```
+
+### 💡 Always Remember
+
+- Implicit Type Conversion is **automatic**.
+- It is performed by the **Python Interpreter**.
+- The programmer does not write any conversion function.
+- Python only performs **safe conversions**.
+- Automatic conversion always follows the **Type Promotion Hierarchy**.
+
+---
+# 🎯 2. Explicit Type Conversion (Type Casting)
+
+## ❓ What is Explicit Type Conversion?
+
+**Explicit Type Conversion**, also known as **Type Casting**, is the process in which the **programmer manually converts one data type into another** by using Python's built-in conversion functions.
+
+Unlike **Implicit Type Conversion**, Python does **not** perform this conversion automatically.
+
+Instead,
+
+the programmer must explicitly tell Python which data type to convert.
+
+Simply,
+
+> **Explicit Type Conversion (Type Casting) is the manual process of converting one data type into another using Python's built-in conversion functions.**
+
+---
+
+## 🤔 Why Do We Need Explicit Type Conversion?
+
+Python is a **strongly typed programming language**.
+
+This means Python does **not** automatically combine incompatible data types because doing so may produce unexpected results or lose important information.
+
+Therefore,
+
+the programmer must manually convert the data whenever required.
+
+Some common reasons are:
+
+- To process user input received through `input()`.
+- To perform mathematical operations on numeric strings.
+- To concatenate numbers with text.
+- To change one collection type into another.
+- To format data before storing or displaying it.
+- To convert data into the format required by a program or library.
+
+Simply,
+
+> **Explicit Type Conversion gives the programmer complete control over how data should be converted.**
+
+---
+
+# 🧠 How Does Explicit Type Conversion Work?
+
+Suppose we write the following program.
+
+```python
+age = "21"
+
+newAge = int(age)
+```
+
+Initially,
+
+Python stores
+
+```
+"21"
+
+↓
+
+String
+```
+
+inside the variable
+
+```
+age
+```
+
+Now,
+
+when Python executes
+
+```python
+int(age)
+```
+
+the Interpreter performs the following steps.
+
+```
+Reads Variable
+
+        │
+
+        ▼
+
+Checks Current Data Type
+
+        │
+
+        ▼
+
+Calls int()
+
+        │
+
+        ▼
+
+Valid Conversion?
+
+   ┌────┴────┐
+   │         │
+
+  YES        NO
+
+   │         │
+
+   ▼         ▼
+
+Create New   Raise
+Integer      ValueError
+Object
+
+   │
+
+   ▼
+
+Store in New Variable
+```
+
+If the conversion is valid,
+
+Python creates a **new object** of the required data type.
+
+If the conversion is not possible,
+
+Python raises an error.
+
+---
+
+# 💾 Memory Representation
+
+Consider the following program.
+
+```python
+age = "21"
+
+newAge = int(age)
+```
+
+Initially,
+
+```
+Computer RAM
+
++----------------------+
+| Variable | Value     |
++----------------------+
+| age      | "21"      |
++----------------------+
+```
+
+After executing
+
+```python
+int(age)
+```
+
+Python creates a **new Integer object**.
+
+```
+Computer RAM
+
++----------------------+
+| Variable | Value     |
++----------------------+
+| age      | "21"      |
+| newAge   | 21        |
++----------------------+
+```
+
+Notice carefully,
+
+The original variable
+
+```python
+age
+```
+
+still stores a **String**.
+
+Only
+
+```python
+newAge
+```
+
+stores the converted Integer.
+
+This proves that
+
+> **Type Casting never changes the original object. It creates a new object of the required data type.**
+
+---
+
+# 🔧 Built-in Conversion Functions
+
+Python provides several built-in functions for converting one data type into another.
+
+| Function | Converts To |
+|----------|-------------|
+| `int()` | Integer |
+| `float()` | Float |
+| `str()` | String |
+| `bool()` | Boolean |
+| `complex()` | Complex Number |
+| `list()` | List |
+| `tuple()` | Tuple |
+| `set()` | Set |
+| `dict()` | Dictionary* |
+| `bytes()` | Bytes |
+
+> **💡 Note**
+>
+> `dict()` conversion works only when the given data is in a valid key-value pair format.
+
+---
+
+# 💻 Example Programs
+
+### String → Integer
+
+```python
+age = "21"
+
+newAge = int(age)
+
+print(newAge)
+
+print(type(newAge))
+```
+
+Output
+
+```text
+21
+
+<class 'int'>
+```
+
+---
+
+### Integer → Float
+
+```python
+x = 10
+
+y = float(x)
+
+print(y)
+
+print(type(y))
+```
+
+Output
+
+```text
+10.0
+
+<class 'float'>
+```
+
+---
+
+### Float → Integer
+
+```python
+price = 99.99
+
+amount = int(price)
+
+print(amount)
+```
+
+Output
+
+```text
+99
+```
+
+Notice that
+
+```
+99.99
+
+↓
+
+99
+```
+
+The decimal part is removed.
+
+---
+
+### Integer → String
+
+```python
+marks = 95
+
+result = str(marks)
+
+print(result)
+
+print(type(result))
+```
+
+Output
+
+```text
+95
+
+<class 'str'>
+```
+
+---
+
+### List → Set
+
+```python
+numbers = [1, 2, 2, 3, 3, 4]
+
+uniqueNumbers = set(numbers)
+
+print(uniqueNumbers)
+```
+
+Output
+
+```text
+{1, 2, 3, 4}
+```
+
+The duplicate values are automatically removed because **Sets do not allow duplicate elements.**
+
+---
+
+# 📌 Remember
+
+```
+Programmer
+
+        │
+
+        ▼
+
+Chooses Conversion Function
+
+        │
+
+        ▼
+
+Interpreter Checks
+
+        │
+
+        ▼
+
+Valid Conversion?
+
+        │
+
+ ┌──────┴──────┐
+ │             │
+
+ ▼             ▼
+
+Yes            No
+
+ │             │
+
+ ▼             ▼
+
+Create New     Raise Error
+
+Object
+
+ │
+
+ ▼
+
+Store Result
+```
+
+### 💡 Always Remember
+
+- Explicit Type Conversion is **manual**.
+- The programmer chooses the conversion function.
+- Python creates a **new object** after conversion.
+- The original object is **never modified**.
+- Invalid conversions raise an exception.
+
+---
+# 📊 Conversion Compatibility Table
+
+Not every data type can be converted into every other data type.
+
+Some conversions are valid,
+
+while others generate errors.
+
+The table below shows the most common conversions supported by Python.
+
+| Original Data Type | Can Be Converted To |
+|--------------------|---------------------|
+| `bool` | `int`, `float`, `complex`, `str` |
+| `int` | `bool`, `float`, `complex`, `str` |
+| `float` | `bool`, `int`, `complex`, `str` |
+| `complex` | `bool`, `str` |
+| `str` | `int*`, `float*`, `bool`, `list`, `tuple`, `set` |
+| `list` | `tuple`, `set`, `str`, `bool` |
+| `tuple` | `list`, `set`, `str`, `bool` |
+| `set` | `list`, `tuple`, `str`, `bool` |
+| `dict` | `list` (keys), `tuple` (keys), `set` (keys), `str`, `bool` |
+
+> **💡 Note**
+>
+> - `*` indicates that the string must contain a valid value.
+>
+> Example:
+>
+> ```python
+> int("100")      # ✅ Valid
+> int("hello")    # ❌ ValueError
+> ```
+
+---
+
+# ⚠️ Common Beginner Mistakes
+
+While learning Type Conversion, beginners often make the following mistakes.
+
+Let's understand them one by one.
+
+---
+
+## 1. Trying to Convert an Invalid String into an Integer
+
+```python
+num = int("Hello")
+```
+
+Output
+
+```text
+ValueError
+```
+
+### Why?
+
+Python cannot convert alphabetical text into an integer.
+
+Only numeric strings can be converted.
+
+✅ Correct
+
+```python
+num = int("100")
+```
+
+---
+
+## 2. Converting a Decimal String Directly into an Integer
+
+```python
+num = int("10.5")
+```
+
+Output
+
+```text
+ValueError
+```
+
+### Why?
+
+`"10.5"` is a floating-point value stored as a string.
+
+Python cannot convert it directly into an integer.
+
+✅ Correct
+
+```python
+num = int(float("10.5"))
+```
+
+---
+
+## 3. Thinking `"False"` Becomes `False`
+
+Many beginners expect this.
+
+```python
+print(bool("False"))
+```
+
+Output
+
+```text
+True
+```
+
+### Why?
+
+Because every **non-empty string** is considered **True**.
+
+Only an empty string becomes `False`.
+
+```python
+bool("")
+```
+
+Output
+
+```text
+False
+```
+
+---
+
+## 4. Forgetting to Convert User Input
+
+```python
+age = input("Enter Age : ")
+
+print(age + 10)
+```
+
+Output
+
+```text
+TypeError
+```
+
+### Why?
+
+`input()` always returns a **String**.
+
+Python cannot add a String and an Integer.
+
+✅ Correct
+
+```python
+age = int(input("Enter Age : "))
+
+print(age + 10)
+```
+
+---
+
+## 5. Expecting `list()` to Create a Single List Element
+
+```python
+print(list("Python"))
+```
+
+Output
+
+```python
+['P', 'y', 't', 'h', 'o', 'n']
+```
+
+Many beginners expect
+
+```python
+["Python"]
+```
+
+Actually,
+
+`list()` converts every character into a separate list element.
+
+---
+
+## 6. Assuming Type Conversion Changes the Original Variable
+
+```python
+x = "100"
+
+y = int(x)
+```
+
+Many beginners think
+
+```
+x
+
+↓
+
+100 (Integer)
+```
+
+Actually,
+
+```
+x
+
+↓
+
+"100"
+
+(String)
+
+
+
+y
+
+↓
+
+100
+
+(Integer)
+```
+
+The original variable never changes.
+
+Python creates a **new object**.
+
+---
+
+# ❌ What Happens If Type Conversion Didn't Exist?
+
+Now imagine Python had no Type Conversion.
+
+Almost every real-world program would become difficult to write.
+
+Some examples are shown below.
+
+| Without Type Conversion | Result |
+|--------------------------|--------|
+| No mixed numeric operations | `5 + 2.5` would generate an error |
+| No automatic numeric promotion | Every number must have exactly the same data type |
+| No String → Number conversion | User input becomes difficult to process |
+| No Number → String conversion | Output formatting becomes difficult |
+| No Collection Conversion | Cannot convert Lists, Tuples or Sets |
+| More Runtime Errors | Programs become less flexible |
+| More Manual Code | Programmer must write conversion logic manually |
+| Harder Data Processing | Files, APIs and databases become difficult to handle |
+
+Simply,
+
+> **Type Conversion is one of the main reasons Python is simple, flexible, and beginner-friendly.**
+
+---
+
+# ⚠️ Limitations of Type Conversion
+
+Although Type Conversion is very useful,
+
+it also has some limitations.
+
+- Data loss may occur during some conversions.
+
+```python
+int(9.99)
+```
+
+Output
+
+```text
+9
+```
+
+The decimal part is removed.
+
+---
+
+- Not every String can be converted into a Number.
+
+```python
+int("Python")
+```
+
+↓
+
+`ValueError`
+
+---
+
+- Some conversions are irreversible.
+
+Example
+
+```python
+numbers = [1,2,2,3]
+
+unique = set(numbers)
+```
+
+Output
+
+```python
+{1,2,3}
+```
+
+The duplicate values are removed.
+
+You cannot recover them again.
+
+---
+
+- Some conversions generate runtime errors.
+
+Example
+
+```python
+int("")
+```
+
+↓
+
+`ValueError`
+
+---
+
+- Python does not automatically convert incompatible data types.
+
+Example
+
+```python
+"100" + 50
+```
+
+↓
+
+`TypeError`
+
+---
+
+# 🎯 What You've Learned
+
+After completing this module, you should now be able to:
+
+- ✅ Explain what Type Conversion is.
+- ✅ Explain why Type Conversion is required.
+- ✅ Differentiate between Implicit and Explicit Type Conversion.
+- ✅ Understand how Python performs Type Conversion internally.
+- ✅ Explain memory representation during conversion.
+- ✅ Use Python's built-in conversion functions.
+- ✅ Understand the Type Promotion Hierarchy.
+- ✅ Predict valid and invalid conversions.
+- ✅ Avoid common beginner mistakes.
+- ✅ Explain the limitations of Type Conversion.
+
+---
+
+# ⚡ Quick Revision
+
+| Concept | One-Line Explanation |
+|----------|----------------------|
+| **Type Conversion** | Changing one data type into another. |
+| **Implicit Conversion** | Automatic conversion performed by the Python Interpreter. |
+| **Explicit Conversion** | Manual conversion performed by the programmer using built-in functions. |
+| **Type Casting** | Another name for Explicit Type Conversion. |
+| **Type Promotion** | Automatic conversion from a compatible lower numeric type to a higher one. |
+| **Built-in Conversion Functions** | Functions like `int()`, `float()`, `str()`, `list()`, etc. |
+| **Memory Behavior** | Type Conversion creates a new object; it does not modify the original object. |
+
+---
+
+# 💻 Practice Programs
+
+To understand **Type Conversion & Type Casting** from **Beginner → Advanced** with detailed explanations and well-commented programs, visit:
+
+🔗 **Nagabasha's GitHub Repository**
+
+https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/typeConversion_BasicToAdvanced.py
+
+---
+
+## ➡️ Next Module
+
+Congratulations! 🎉
+
+You now understand how Python converts data from one type to another and why type conversion is essential in real-world programming.
+
+In the next module, we'll learn about **Conditional Statements**, where you'll understand how Python makes decisions using `if`, `elif`, and `else`.
+
+---
+</details>
