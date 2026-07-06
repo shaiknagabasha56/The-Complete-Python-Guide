@@ -5964,11 +5964,7 @@ https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/keywords
 
 <details>
 <summary>
-
-## 📖 Module 07 • Type Conversion & Type Casting
-
-Learn how Python converts one data type into another, why type conversion is important, the difference between implicit and explicit conversion, and how Python handles different data types internally.
-
+<b>Module 07 • Type Conversion & Type Casting</b>
 </summary>
 
 ---
