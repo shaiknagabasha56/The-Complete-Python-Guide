@@ -7559,6 +7559,1488 @@ To understand **Type Conversion & Type Casting** from **Beginner → Advanced** 
 https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/typeConversion_BasicToAdvanced.py
 
 ---
+</details>
 
 
+
+
+
+<details>
+<summary>
+📖 Module 08 • Conditional Statements
+</summary>
+
+---
+
+# ❓ What are Conditional Statements?
+
+Until now, every Python program we've written executes **line by line** from top to bottom.
+
+For example,
+
+```python
+print("Good Morning")
+
+print("Welcome")
+
+print("Have a Nice Day")
+```
+
+Output
+
+```text
+Good Morning
+
+Welcome
+
+Have a Nice Day
+```
+
+The Interpreter executes every statement one after another.
+
+But in real-world applications,
+
+we don't always want every statement to execute.
+
+Sometimes,
+
+we want a statement to execute **only if a particular condition is satisfied**.
+
+For example,
+
+- Allow login only if the password is correct.
+- Allow withdrawal only if the account has enough balance.
+- Display "Passed" only if the marks are greater than or equal to 35.
+- Allow voting only if the person's age is 18 or above.
+
+To make these kinds of decisions,
+
+Python provides **Conditional Statements**.
+
+> **Conditional Statements are decision-making statements that execute a block of code only when a specified condition is satisfied.**
+
+Simply,
+
+Conditional Statements allow a program to **choose** what code should execute based on a condition.
+
+---
+
+# 🤔 Why Do We Need Conditional Statements?
+
+Real-world programs constantly make decisions.
+
+Without Conditional Statements,
+
+every line of code would execute regardless of whether it is needed or not.
+
+Conditional Statements help us write smarter programs by executing only the required code.
+
+Some common reasons are:
+
+- Make decisions based on different situations.
+- Execute code only when a condition is satisfied.
+- Prevent unnecessary execution of code.
+- Improve program efficiency.
+- Handle different user inputs.
+- Validate user information.
+- Control the overall flow of a program.
+
+Simply,
+
+> **Conditional Statements make programs intelligent by allowing them to make decisions just like humans.**
+
+---
+
+# 📅 When Do We Use Conditional Statements?
+
+We use Conditional Statements whenever a program needs to decide between different actions.
+
+Some real-world examples are:
+
+- ATM Machine → Check PIN before allowing transactions.
+- Instagram → Verify username and password before login.
+- College Portal → Check attendance before allowing exams.
+- Online Shopping → Apply discount only if the coupon is valid.
+- Banking Application → Transfer money only if the balance is sufficient.
+- Google Forms → Show different questions based on previous answers.
+- Cybersecurity Tools → Allow access only if authentication is successful.
+
+Whenever a program needs to answer questions like
+
+- Should this code execute?
+- Is the user eligible?
+- Is this condition true?
+- Which action should be performed?
+
+Conditional Statements are used.
+
+---
+
+# 🌍 Real-World Analogy
+
+Imagine a security guard standing at the entrance of a company.
+
+Every person who wants to enter must first show their ID card.
+
+The guard checks one condition.
+
+```
+Has Valid ID?
+
+        │
+
+   ┌────┴────┐
+
+  Yes        No
+
+   │          │
+
+   ▼          ▼
+
+Allow      Deny
+Entry      Entry
+```
+
+The guard does **not** allow everyone to enter.
+
+He first checks the condition.
+
+Only when the condition is satisfied,
+
+he allows entry.
+
+Python works in exactly the same way.
+
+Instead of checking an ID card,
+
+Python checks a **Condition**.
+
+If the condition is **True**,
+
+Python executes the block of code.
+
+Otherwise,
+
+it skips that block.
+
+---
+
+# ❓ What is a Condition?
+
+A **Condition** is an expression that Python evaluates to determine whether something is **True** or **False**.
+
+Simply,
+
+> **A Condition is an expression that always produces either `True` or `False`.**
+
+Python uses this result to decide which block of code should be executed.
+
+Some examples are:
+
+```python
+age >= 18
+```
+
+```python
+marks >= 35
+```
+
+```python
+username == "Nagabasha"
+```
+
+```python
+salary > 50000
+```
+
+Each of the above expressions produces either
+
+```python
+True
+```
+
+or
+
+```python
+False
+```
+
+For example,
+
+```python
+age = 20
+
+print(age >= 18)
+```
+
+Output
+
+```text
+True
+```
+
+Another example,
+
+```python
+marks = 28
+
+print(marks >= 35)
+```
+
+Output
+
+```text
+False
+```
+
+Notice that,
+
+Python is **not** interested in the numbers themselves.
+
+It is interested in the **result of the comparison**.
+
+That result is called the **Condition**.
+
+---
+
+# 📌 Remember
+
+```
+Condition
+
+        │
+
+        ▼
+
+Python Evaluates
+
+        │
+
+        ▼
+
+True or False
+
+        │
+
+        ▼
+
+Decision
+
+        │
+
+        ▼
+
+Execute or Skip Code
+```
+
+---
+
+# 🧠 How Do Conditional Statements Work Internally?
+
+Now you might have a question.
+
+> **"How does Python decide whether to execute a block of code or skip it?"**
+
+The answer is simple.
+
+Whenever the Python Interpreter encounters a Conditional Statement,
+
+it first **evaluates the condition**.
+
+A condition always produces one of two results.
+
+- `True`
+- `False`
+
+Based on this result,
+
+Python decides whether to execute the corresponding block of code.
+
+If the condition is **True**,
+
+Python executes the block.
+
+If the condition is **False**,
+
+Python skips that block and continues with the remaining program.
+
+---
+
+# ⚙ Internal Working
+
+Suppose we write the following program.
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible")
+```
+
+When we run this program,
+
+the Python Interpreter works internally like this.
+
+```
+You Write Code
+
+        │
+
+        ▼
+
+Python Interpreter
+
+        │
+
+        ▼
+
+Reads "if"
+
+        │
+
+        ▼
+
+Evaluates Condition
+
+        │
+
+        ▼
+
+Condition Result
+
+   ┌────┴────┐
+   │         │
+
+ True      False
+
+   │         │
+
+   ▼         ▼
+
+Execute     Skip
+Block       Block
+
+        │
+
+        ▼
+
+Continue Executing Program
+```
+
+---
+
+## Let's Understand the Above Example
+
+The interpreter first executes
+
+```python
+age = 20
+```
+
+Now the variable
+
+```
+age
+```
+
+contains
+
+```
+20
+```
+
+Next,
+
+Python reads
+
+```python
+if age >= 18:
+```
+
+It evaluates the condition
+
+```
+20 >= 18
+```
+
+The result becomes
+
+```
+True
+```
+
+Since the result is **True**,
+
+Python executes
+
+```python
+print("Eligible")
+```
+
+Output
+
+```text
+Eligible
+```
+
+Now suppose we change the value.
+
+```python
+age = 15
+
+if age >= 18:
+    print("Eligible")
+```
+
+Python now evaluates
+
+```
+15 >= 18
+```
+
+The result becomes
+
+```
+False
+```
+
+Since the condition is **False**,
+
+Python skips the block.
+
+Therefore,
+
+nothing is printed.
+
+---
+
+# 💾 Memory Representation
+
+Consider the following program.
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible")
+```
+
+Initially,
+
+the memory looks like this.
+
+```
+Computer RAM
+
++----------------------+
+| Variable | Value     |
++----------------------+
+| age      | 20        |
++----------------------+
+```
+
+Now,
+
+the Interpreter evaluates
+
+```
+age >= 18
+```
+
+Internally,
+
+it retrieves the value stored inside
+
+```
+age
+```
+
+```
+Computer RAM
+
+age
+
+↓
+
+20
+
+↓
+
+Interpreter Reads Value
+
+↓
+
+20 >= 18
+
+↓
+
+True
+```
+
+Since the result is **True**,
+
+Python executes
+
+```python
+print("Eligible")
+```
+
+Notice carefully,
+
+the condition itself is **not stored permanently** in memory.
+
+Python simply evaluates it,
+
+obtains either **True** or **False**,
+
+makes a decision,
+
+and continues executing the program.
+
+---
+
+# 🔄 Flow of Execution
+
+Conditional Statements control the flow of a program.
+
+Instead of executing every statement,
+
+Python first checks the condition.
+
+```
+Program Starts
+
+        │
+
+        ▼
+
+Interpreter Reads if
+
+        │
+
+        ▼
+
+Evaluate Condition
+
+        │
+
+   ┌────┴────┐
+   │         │
+
+ True      False
+
+   │         │
+
+   ▼         ▼
+
+Execute     Skip
+Block       Block
+
+        │
+
+        ▼
+
+Continue With Next Statement
+```
+
+For an **if Statement**,
+
+there are only two possibilities.
+
+- Execute the block.
+- Skip the block.
+
+After that,
+
+Python continues executing the remaining program normally.
+
+---
+
+# 🧠 How Does Python Know Where the if Block Starts and Ends?
+
+Another common question beginners ask is,
+
+> **"How does Python know which statements belong to the `if` block?"**
+
+The answer is,
+
+Python uses **Indentation**.
+
+Unlike many programming languages that use braces `{ }`,
+
+Python uses spaces (or tabs) to define a block of code.
+
+For example,
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible")
+    print("Welcome")
+
+print("Program Ended")
+```
+
+Here,
+
+both
+
+```python
+print("Eligible")
+
+print("Welcome")
+```
+
+belong to the **if block** because they have the same indentation.
+
+But
+
+```python
+print("Program Ended")
+```
+
+does **not** belong to the `if` block because its indentation has ended.
+
+Internally,
+
+Python understands it like this.
+
+```
+Interpreter Reads if
+
+        │
+
+        ▼
+
+Colon (:)
+
+        │
+
+        ▼
+
+Indented Lines
+
+        │
+
+        ▼
+
+These Statements Belong
+
+to the if Block
+
+        │
+
+        ▼
+
+Indentation Ends
+
+        │
+
+        ▼
+
+if Block Ends
+
+        │
+
+        ▼
+
+Continue Remaining Program
+```
+
+That is why indentation is **not just for making the code look beautiful**.
+
+It actually tells the Python Interpreter
+
+**where a block of code starts and where it ends.**
+
+---
+
+# 📌 Remember
+
+```
+Conditional Statement
+
+        │
+
+        ▼
+
+Interpreter Reads Condition
+
+        │
+
+        ▼
+
+Evaluate
+
+        │
+
+        ▼
+
+True or False
+
+        │
+
+   ┌────┴────┐
+   │         │
+
+ True      False
+
+   │         │
+
+   ▼         ▼
+
+Execute     Skip
+
+        │
+
+        ▼
+
+Continue Program
+```
+
+### 💡 Always Remember
+
+- Python evaluates every condition before making a decision.
+- A condition always returns **True** or **False**.
+- If the condition is **True**, Python executes the block.
+- If the condition is **False**, Python skips the block.
+- Python uses **Indentation** to determine where a block of code starts and ends.
+- After executing or skipping a block, Python continues with the remaining program.
+
+---
+# 🌳 Classification of Conditional Statements
+
+Python provides different types of Conditional Statements to handle different decision-making situations.
+
+```
+Conditional Statements
+
+│
+
+├── 1. if Statement
+
+├── 2. if-else Statement
+
+├── 3. if-elif-else Statement
+
+├── 4. Nested if Statement
+
+├── 5. Nested if-else Statement
+
+├── 6. Shorthand if Statement
+
+├── 7. Ternary Conditional Expression
+
+└── 8. match-case Statement
+```
+
+Let's understand each one step by step.
+
+---
+
+# 1️⃣ if Statement
+
+## ❓ What is an if Statement?
+
+The **if Statement** is the simplest Conditional Statement in Python.
+
+It executes a block of code **only when the specified condition is True**.
+
+If the condition is False,
+
+Python simply skips that block and continues with the remaining program.
+
+Simply,
+
+> **An if Statement executes a block of code only when its condition evaluates to True.**
+
+---
+
+## 🤔 When Do We Use an if Statement?
+
+We use an **if Statement** when there is **only one condition** to check.
+
+Some examples are:
+
+- Display "Eligible" only if age is 18 or above.
+- Print "Positive Number" only if the number is greater than zero.
+- Allow login only if the password is correct.
+- Show bonus only if the employee completed the target.
+
+---
+
+## 📝 Syntax
+
+```python
+if condition:
+    statements
+```
+
+---
+
+## 💻 Example
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible for Voting")
+```
+
+Output
+
+```text
+Eligible for Voting
+```
+
+Now,
+
+```python
+age = 15
+
+if age >= 18:
+    print("Eligible for Voting")
+```
+
+Output
+
+```text
+No Output
+```
+
+Because the condition becomes **False**.
+
+---
+
+# 🌍 Real-World Analogy
+
+Imagine a classroom.
+
+The teacher says,
+
+> "Only students who scored above 90 marks should stand."
+
+```
+Marks > 90 ?
+
+        │
+
+   ┌────┴────┐
+
+  Yes        No
+
+   │          │
+
+   ▼          ▼
+
+Stand      Keep Sitting
+```
+
+Only students satisfying the condition perform the action.
+
+Python behaves in exactly the same way.
+
+---
+
+# 2️⃣ if-else Statement
+
+## ❓ What is an if-else Statement?
+
+An **if-else Statement** is used when there are **exactly two possible outcomes**.
+
+If the condition is True,
+
+Python executes the **if block**.
+
+Otherwise,
+
+Python executes the **else block**.
+
+Simply,
+
+> **An if-else Statement executes one block when the condition is True and another block when the condition is False.**
+
+---
+
+## 🤔 When Do We Use an if-else Statement?
+
+We use an **if-else Statement** whenever there are only two possible decisions.
+
+Examples:
+
+- Pass or Fail
+- Login Successful or Login Failed
+- Eligible or Not Eligible
+- Even or Odd
+- Positive or Negative
+
+---
+
+## 📝 Syntax
+
+```python
+if condition:
+    statements
+
+else:
+    statements
+```
+
+---
+
+## 💻 Example
+
+```python
+age = 20
+
+if age >= 18:
+    print("Eligible")
+
+else:
+    print("Not Eligible")
+```
+
+Output
+
+```text
+Eligible
+```
+
+Another example,
+
+```python
+age = 15
+
+if age >= 18:
+    print("Eligible")
+
+else:
+    print("Not Eligible")
+```
+
+Output
+
+```text
+Not Eligible
+```
+
+---
+
+# 🌍 Real-World Analogy
+
+Imagine an ATM.
+
+It first checks your PIN.
+
+```
+PIN Correct?
+
+        │
+
+   ┌────┴────┐
+
+  Yes        No
+
+   │          │
+
+   ▼          ▼
+
+Access     Reject
+Granted     Access
+```
+
+There are only **two possible outcomes**.
+
+Python's **if-else Statement** works exactly like this.
+
+---
+
+# 3️⃣ if-elif-else Statement
+
+## ❓ What is an if-elif-else Statement?
+
+Sometimes,
+
+there are more than two possible outcomes.
+
+In such situations,
+
+using multiple **if-else Statements** becomes difficult.
+
+Python provides the **if-elif-else Statement** to handle multiple conditions efficiently.
+
+Simply,
+
+> **An if-elif-else Statement checks multiple conditions one by one and executes only the first block whose condition is True.**
+
+If none of the conditions are True,
+
+the **else block** executes.
+
+---
+
+## 🤔 When Do We Use an if-elif-else Statement?
+
+Whenever there are **multiple choices**.
+
+Examples:
+
+- Student Grades
+- Traffic Signal System
+- Salary Slabs
+- Movie Ticket Pricing
+- Weather Alerts
+- Menu Driven Programs
+
+---
+
+## 📝 Syntax
+
+```python
+if condition1:
+    statements
+
+elif condition2:
+    statements
+
+elif condition3:
+    statements
+
+else:
+    statements
+```
+
+---
+
+## 💻 Example
+
+```python
+marks = 82
+
+if marks >= 90:
+    print("Grade A+")
+
+elif marks >= 75:
+    print("Grade A")
+
+elif marks >= 50:
+    print("Grade B")
+
+else:
+    print("Fail")
+```
+
+Output
+
+```text
+Grade A
+```
+
+---
+
+# 🧠 Internal Flow
+
+```
+Condition 1
+
+↓
+
+True?
+
+│
+
+├── Yes
+
+│      ↓
+
+│ Execute Block
+
+│
+
+└── No
+
+       ↓
+
+Condition 2
+
+↓
+
+True?
+
+│
+
+├── Yes
+
+│      ↓
+
+│ Execute Block
+
+│
+
+└── No
+
+       ↓
+
+Condition 3
+
+↓
+
+...
+
+↓
+
+else
+```
+
+Notice that,
+
+Python stops checking conditions **as soon as it finds the first True condition**.
+
+The remaining conditions are **never evaluated**.
+
+This improves the efficiency of the program.
+
+---
+
+# 📌 Remember
+
+```
+if
+
+↓
+
+One Condition
+
+↓
+
+Execute Only if True
+
+
+
+if-else
+
+↓
+
+Two Possible Outcomes
+
+↓
+
+One Block Always Executes
+
+
+
+if-elif-else
+
+↓
+
+Multiple Conditions
+
+↓
+
+First True Block Executes
+
+↓
+
+Remaining Conditions are Skipped
+```
+
+---
+
+# 📊 Comparison of Conditional Statements
+
+Each Conditional Statement is designed for a different purpose.
+
+The table below summarizes when each one should be used.
+
+| Conditional Statement | Best Used For | Number of Outcomes |
+|-----------------------|---------------|--------------------|
+| **if** | Execute code only when a condition is True | One |
+| **if-else** | Choose between two possible outcomes | Two |
+| **if-elif-else** | Check multiple conditions | Multiple |
+| **Nested if** | Check another condition only after the first one is True | Dependent Conditions |
+| **Nested if-else** | Make multi-level decisions | Multiple Levels |
+| **Shorthand if** | Execute a single statement in one line | One |
+| **Ternary Conditional Expression** | Return one of two values in a single line | Two |
+| **match-case** | Compare one variable with multiple fixed values | Multiple Fixed Values |
+
+---
+
+# ⚠ Common Beginner Mistakes
+
+While learning Conditional Statements, beginners often make the following mistakes.
+
+Let's understand them one by one.
+
+---
+
+## 1. Forgetting the Colon (:)
+
+```python
+age = 20
+
+if age >= 18
+    print("Eligible")
+```
+
+Output
+
+```text
+SyntaxError
+```
+
+### Why?
+
+Every Conditional Statement in Python must end with a colon (`:`).
+
+✅ Correct
+
+```python
+if age >= 18:
+    print("Eligible")
+```
+
+---
+
+## 2. Incorrect Indentation
+
+```python
+age = 20
+
+if age >= 18:
+print("Eligible")
+```
+
+Output
+
+```text
+IndentationError
+```
+
+### Why?
+
+Python uses indentation to identify the block of code that belongs to the condition.
+
+✅ Correct
+
+```python
+if age >= 18:
+    print("Eligible")
+```
+
+---
+
+## 3. Using = Instead of ==
+
+Many beginners write
+
+```python
+if age = 18:
+```
+
+Output
+
+```text
+SyntaxError
+```
+
+### Why?
+
+The symbol
+
+```python
+=
+```
+
+is used for **Assignment**.
+
+The symbol
+
+```python
+==
+```
+
+is used for **Comparison**.
+
+✅ Correct
+
+```python
+if age == 18:
+    print("Age is 18")
+```
+
+---
+
+## 4. Using Multiple if Statements Instead of elif
+
+```python
+marks = 95
+
+if marks >= 90:
+    print("Grade A+")
+
+if marks >= 75:
+    print("Grade A")
+```
+
+Output
+
+```text
+Grade A+
+
+Grade A
+```
+
+### Why?
+
+Both conditions are checked independently.
+
+Usually,
+
+the correct solution is
+
+```python
+marks = 95
+
+if marks >= 90:
+    print("Grade A+")
+
+elif marks >= 75:
+    print("Grade A")
+```
+
+Now,
+
+only one block executes.
+
+---
+
+## 5. Expecting Both if and else to Execute
+
+Some beginners think
+
+```python
+if condition:
+    statements
+
+else:
+    statements
+```
+
+will execute both blocks.
+
+Actually,
+
+Python executes **only one block**.
+
+- If the condition is **True**, only the `if` block executes.
+- If the condition is **False**, only the `else` block executes.
+
+---
+
+## 6. Writing Conditions That Always Return True
+
+Example
+
+```python
+if 100:
+    print("Hello")
+```
+
+Output
+
+```text
+Hello
+```
+
+Many beginners expect an error.
+
+Actually,
+
+Python considers every non-zero number as **True**.
+
+Similarly,
+
+```python
+if "Python":
+```
+
+also evaluates to **True** because it is a non-empty string.
+
+---
+
+# ❌ Limitations of Conditional Statements
+
+Although Conditional Statements are very useful,
+
+they also have some limitations.
+
+- Too many nested conditions make programs difficult to read.
+- Deep nesting reduces code readability and maintainability.
+- Large `if-elif` chains become difficult to manage.
+- Incorrect indentation immediately causes errors.
+- Complex conditions are harder to debug.
+- Repeated conditions make programs inefficient.
+- Some situations are better handled using loops, functions, or dictionaries instead of long Conditional Statements.
+
+Simply,
+
+> **Conditional Statements should be kept as simple as possible.**
+
+---
+
+# 🎯 What You've Learned
+
+After completing this module, you should now be able to:
+
+- ✅ Explain what Conditional Statements are.
+- ✅ Explain why Conditional Statements are required.
+- ✅ Identify real-world situations where Conditional Statements are used.
+- ✅ Explain what a Condition is.
+- ✅ Understand how Python evaluates conditions internally.
+- ✅ Understand memory representation during condition evaluation.
+- ✅ Explain how indentation defines code blocks.
+- ✅ Use all Conditional Statements correctly.
+- ✅ Differentiate between different Conditional Statements.
+- ✅ Avoid common beginner mistakes.
+
+---
+
+# ⚡ Quick Revision
+
+| Concept | One-Line Explanation |
+|----------|----------------------|
+| **Conditional Statement** | Executes code based on a condition. |
+| **Condition** | An expression that returns either `True` or `False`. |
+| **if** | Executes code only when the condition is True. |
+| **if-else** | Executes one of two blocks. |
+| **if-elif-else** | Checks multiple conditions one by one. |
+| **Nested if** | Checks another condition inside an existing condition. |
+| **Nested if-else** | Performs multi-level decision making. |
+| **Shorthand if** | One-line version of a simple `if` statement. |
+| **Ternary Expression** | One-line version of an `if-else` expression. |
+| **match-case** | Matches one variable against multiple fixed values. |
+| **Indentation** | Defines the beginning and end of a block of code. |
+
+---
+
+# 💻 Practice Programs
+
+To understand **Conditional Statements** from **Beginner → Advanced** with detailed explanations and well-commented programs, visit:
+
+🔗 **Nagabasha's GitHub Repository**
+
+https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/conditionalStatements_BasicToAdvanced.py
+
+---
+
+## ➡ Next Module
+
+Congratulations! 🎉
+
+You now understand how Python makes decisions using Conditional Statements and how the Interpreter chooses which block of code to execute.
+
+In the next module, we'll learn about **Loops**, where you'll understand how Python repeats a block of code efficiently without writing the same statements again.
+
+---
 </details>
