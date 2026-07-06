@@ -5964,7 +5964,7 @@ https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/keywords
 
 <details>
 <summary>
-<b>Module 07 • Type Conversion & Type Casting</b>
+<b>📖 Module 07 • Type Conversion & Type Casting</b>
 </summary>
 
 ---
@@ -7550,20 +7550,6 @@ After completing this module, you should now be able to:
 
 ---
 
-# ⚡ Quick Revision
-
-| Concept | One-Line Explanation |
-|----------|----------------------|
-| **Type Conversion** | Changing one data type into another. |
-| **Implicit Conversion** | Automatic conversion performed by the Python Interpreter. |
-| **Explicit Conversion** | Manual conversion performed by the programmer using built-in functions. |
-| **Type Casting** | Another name for Explicit Type Conversion. |
-| **Type Promotion** | Automatic conversion from a compatible lower numeric type to a higher one. |
-| **Built-in Conversion Functions** | Functions like `int()`, `float()`, `str()`, `list()`, etc. |
-| **Memory Behavior** | Type Conversion creates a new object; it does not modify the original object. |
-
----
-
 # 💻 Practice Programs
 
 To understand **Type Conversion & Type Casting** from **Beginner → Advanced** with detailed explanations and well-commented programs, visit:
@@ -7574,13 +7560,5 @@ https://github.com/shaiknagabasha56/The-Complete-Python-Guide/blob/main/typeConv
 
 ---
 
-## ➡️ Next Module
 
-Congratulations! 🎉
-
-You now understand how Python converts data from one type to another and why type conversion is essential in real-world programming.
-
-In the next module, we'll learn about **Conditional Statements**, where you'll understand how Python makes decisions using `if`, `elif`, and `else`.
-
----
 </details>
