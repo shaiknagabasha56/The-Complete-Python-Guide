@@ -209,3 +209,46 @@ for i in range(6):
 """
 
 
+
+#16.print the following pattern:
+#     *
+#    ***
+#   *****
+#  *******
+# *********
+
+"""
+rows = 5
+for i in range(1, rows + 1):
+    print(" " * (rows - i) + "*" * (2 * i - 1))
+"""
+
+
+#17.print the following pattern:
+# 1 
+# 1 2 
+# 1 2 3 
+# 1 2 3 4 
+# 1 2 3 4 5 
+"""
+for i in range(1,6):
+    for j in range(1,i+1):
+        print(j,end=" ")
+    print("\n")
+"""
+
+
+#18.print the following pattern:
+# 1 2 3 4 5
+# 1 2 3 4
+# 1 2 3
+# 1 2
+# 1
+"""
+for i in range(1,6):
+    for j in range(1,i+5):
+        if j<i:
+            print(j,end=" ")
+    print("\n")
+
+"""
