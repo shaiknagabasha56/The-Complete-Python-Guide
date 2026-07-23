@@ -34,7 +34,7 @@ Whether your goal is **Web Development, Data Science, AI/ML, Automation, Cloud, 
 
 ## 💙 Why This Repository?
 
-I'm a **Computer Science student** currently learning **Cybersecurity**, and Python is one of the most important skills for my journey.
+I'm a **Computer Science student** currently learning **AI/ML Engineering**, and Python is one of the most important skills for my journey.
 
 Instead of keeping personal notes on my computer, I decided to document everything I learn publicly so that other students can learn alongside me.
 
